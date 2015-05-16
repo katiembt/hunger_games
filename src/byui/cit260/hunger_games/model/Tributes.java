@@ -17,28 +17,29 @@ import java.util.Objects;
 
 public class Tributes implements Serializable{
     private String name;
+    private String gender;
     private String district;
-    private int healthPoints;
     private String skills;
-    private int Strength;
-    
+    private int healthPoints;
+    private int strength;
 
     public Tributes() {
     }
 
     @Override
     public String toString() {
-        return "Tributes{" + "name=" + name + ", healthPoints=" + healthPoints + ", skills=" + skills + ", Strength=" + Strength + ", district=" + district+ '}';
+        return "Tributes{" + "name=" + name + ", gender=" + gender + ", district=" + district + ", skills=" + skills + ", healthPoints=" + healthPoints + ", strength=" + strength + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.name);
-        hash = 79 * hash + Objects.hashCode(this.district);
-        hash = 79 * hash + this.healthPoints;
-        hash = 79 * hash + Objects.hashCode(this.skills);
-        hash = 79 * hash + this.Strength;
+        int hash = 5;
+        hash = 41 * hash + Objects.hashCode(this.name);
+        hash = 41 * hash + Objects.hashCode(this.gender);
+        hash = 41 * hash + Objects.hashCode(this.district);
+        hash = 41 * hash + Objects.hashCode(this.skills);
+        hash = 41 * hash + this.healthPoints;
+        hash = 41 * hash + this.strength;
         return hash;
     }
 
@@ -54,23 +55,24 @@ public class Tributes implements Serializable{
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.district, other.district)) {
+        if (!Objects.equals(this.gender, other.gender)) {
             return false;
         }
-        if (this. healthPoints!= other. healthPoints) {
+        if (!Objects.equals(this.district, other.district)) {
             return false;
         }
         if (!Objects.equals(this.skills, other.skills)) {
             return false;
         }
-        if (this.Strength != other.Strength) {
+        if (this.healthPoints != other.healthPoints) {
+            return false;
+        }
+        if (this.strength != other.strength) {
             return false;
         }
         return true;
     }
 
-    
-    
     public String getName() {
         return name;
     }
@@ -79,20 +81,20 @@ public class Tributes implements Serializable{
         this.name = name;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     public String getDistrict() {
         return district;
     }
 
     public void setDistrict(String district) {
         this.district = district;
-    }
-    
-    public int getHeakthPoints() {
-        return healthPoints;
-    }
-
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints= healthPoints;
     }
 
     public String getSkills() {
@@ -103,14 +105,21 @@ public class Tributes implements Serializable{
         this.skills = skills;
     }
 
+    public int getHealthPoints() {
+        return healthPoints;
+    }
+
+    public void setHealthPoints(int healthPoints) {
+        this.healthPoints = healthPoints;
+    }
+
     public int getStrength() {
-        return Strength;
+        return strength;
     }
 
-    public void setStrength(int Strength) {
-        this.Strength = Strength;
+    public void setStrength(int strength) {
+        this.strength = strength;
     }
-
 
 
 }
