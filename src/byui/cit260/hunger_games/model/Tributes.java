@@ -17,7 +17,8 @@ import java.util.Objects;
 
 public class Tributes implements Serializable{
     private String name;
-    private int hp;
+    private String district;
+    private int healthPoints;
     private String skills;
     private int Strength;
     
@@ -27,14 +28,15 @@ public class Tributes implements Serializable{
 
     @Override
     public String toString() {
-        return "Tributes{" + "name=" + name + ", hp=" + hp + ", skills=" + skills + ", Strength=" + Strength + '}';
+        return "Tributes{" + "name=" + name + ", healthPoints=" + healthPoints + ", skills=" + skills + ", Strength=" + Strength + ", district=" + district+ '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 79 * hash + Objects.hashCode(this.name);
-        hash = 79 * hash + this.hp;
+        hash = 79 * hash + Objects.hashCode(this.district);
+        hash = 79 * hash + this.healthPoints;
         hash = 79 * hash + Objects.hashCode(this.skills);
         hash = 79 * hash + this.Strength;
         return hash;
@@ -52,7 +54,10 @@ public class Tributes implements Serializable{
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (this.hp != other.hp) {
+        if (!Objects.equals(this.district, other.district)) {
+            return false;
+        }
+        if (this. healthPoints!= other. healthPoints) {
             return false;
         }
         if (!Objects.equals(this.skills, other.skills)) {
@@ -74,12 +79,20 @@ public class Tributes implements Serializable{
         this.name = name;
     }
 
-    public int getHp() {
-        return hp;
+    public String getDistrict() {
+        return district;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+    
+    public int getHeakthPoints() {
+        return healthPoints;
+    }
+
+    public void setHealthPoints(int healthPoints) {
+        this.healthPoints= healthPoints;
     }
 
     public String getSkills() {
