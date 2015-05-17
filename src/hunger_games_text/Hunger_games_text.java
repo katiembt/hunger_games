@@ -24,9 +24,15 @@ public class Hunger_games_text {
     public static void main(String[] args){
         //Player
        Player created = new Player();
-       created.getName();
+       created.setName("?");
+       created.setGender("?");
+       created.setDistrict("District #");
+       created.setSkills("picked up");
+       created.setHealthPoints(100);
+       created.setStrength(25);
        
-        
+       String PlayerCreated  = created.toString();
+       System.out.println(created);
         
         //Tribute one Male
     Tributes oneM = new Tributes();
@@ -37,7 +43,7 @@ public class Hunger_games_text {
         oneM.setHealthPoints(150);
         oneM.setStrength(20);
 
-        String TributesIOneM = oneM.toString();
+        String TributesOneM = oneM.toString();
         System.out.println(oneM);
         
          //Tribute one female
@@ -105,7 +111,34 @@ public class Hunger_games_text {
             
              String ItemFoodTwo = foodTwo.toString();
              System.out.println(foodTwo);
-        
+             
+             
+        //SCENE
+        Scene goodOne = new Scene();
+            goodOne.setGoodEncounter("Found item");
+            
+                String SceneGoodOne =goodOne.toString();
+                 System.out.println(goodOne);
+             
+         Scene goodTwo = new Scene();
+            goodTwo.setGoodEncounter("Hid Well");
+            
+                String SceneGoodTwo =goodTwo.toString();
+                System.out.println(goodTwo);   
+             
+        Scene badOne = new Scene();
+            badOne.setBadEncounter("Caught in a trap");
+            
+                String SceneBadOne=badOne.toString();
+                System.out.println(badOne);
+         
+        Scene badTwo = new Scene();
+            badTwo.setBadEncounter("Feel into sickness");
+            
+                String SceneBadTwo=badTwo.toString();
+                System.out.println(badTwo);
+                
+                
         //INVENTORY
               
         Item[] inventory = new Item[6];
