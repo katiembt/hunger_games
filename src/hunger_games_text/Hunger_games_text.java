@@ -22,7 +22,7 @@ public class Hunger_games_text {
         //Tribute one Male
     Tributes oneM = new Tributes();
         oneM.setName("jett");
-        oneM.setHp(150);
+        oneM.setHealthPoints(150);
         oneM.setSkills("dagger");
         oneM.setStrength(5);
 
@@ -32,7 +32,7 @@ public class Hunger_games_text {
          //Tribute one female
      Tributes oneF = new Tributes();
         oneF.setName("molly");
-        oneF.setHp(45);
+        oneF.setHealthPoints(45);
         oneF.setSkills("sword");
         oneF.setStrength(5);
 
@@ -42,7 +42,7 @@ public class Hunger_games_text {
        //Tribute two Male
      Tributes twoM = new Tributes();
         twoM.setName("Steve");
-        twoM.setHp(45);
+        twoM.setHealthPoints(45);
         twoM.setSkills("sword");
         twoM.setStrength(5);
         
@@ -52,7 +52,7 @@ public class Hunger_games_text {
          //Tribute two female
      Tributes twoF = new Tributes();
         twoF.setName("Allie");
-        twoF.setHp(45);
+        twoF.setHealthPoints(45);
         twoF.setSkills("sword");
         twoF.setStrength(5);
 
