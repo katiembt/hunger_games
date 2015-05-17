@@ -115,13 +115,13 @@ public class Hunger_games_text {
              
         //SCENE
         Scene goodOne = new Scene();
-            goodOne.setGoodEncounter("Found item");
+            goodOne.setGoodEncounter("Recover Health");
             
                 String SceneGoodOne =goodOne.toString();
                  System.out.println(goodOne);
              
          Scene goodTwo = new Scene();
-            goodTwo.setGoodEncounter("Hid Well");
+            goodTwo.setGoodEncounter("Receive Item");
             
                 String SceneGoodTwo =goodTwo.toString();
                 System.out.println(goodTwo);   
@@ -133,8 +133,7 @@ public class Hunger_games_text {
                 System.out.println(badOne);
          
         Scene badTwo = new Scene();
-            badTwo.setBadEncounter("Feel into sickness");
-            
+            badTwo.setBadEncounter("Come to an illness");
                 String SceneBadTwo=badTwo.toString();
                 System.out.println(badTwo);
                 
