@@ -12,24 +12,28 @@ import java.util.Objects;
  *
  * @author katherineblake
  */
-public class Location implements Serializable{
-   
-     private String row;
-     private String column;
+public class Item implements Serializable{
+     private String name;
+     private int hp;
 
-    public Location() {
+    public Item() {
+    }
+    
+    public Item(String myName, int myHP) {
+        this.name = myName;
+        this.hp = myHP;
     }
 
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + '}';
+        return "Item{" + "name=" + name + ", hp=" + hp + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 37 * hash + Objects.hashCode(this.row);
-        hash = 37 * hash + Objects.hashCode(this.column);
+        hash = 59 * hash + Objects.hashCode(this.name);
+        hash = 59 * hash + this.hp;
         return hash;
     }
 
@@ -41,32 +45,32 @@ public class Location implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Location other = (Location) obj;
-        if (!Objects.equals(this.row, other.row)) {
+        final Item other = (Item) obj;
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.column, other.column)) {
+        if (this.hp != other.hp) {
             return false;
         }
         return true;
     }
-     
-     
-
-    public String getRow() {
-        return row;
+ 
+    
+    
+    public String getName() {
+        return name;
     }
 
-    public void setRow(String row) {
-        this.row = row;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getColumn() {
-        return column;
+    public int getHp() {
+        return hp;
     }
 
-    public void setColumn(String column) {
-        this.column = column;
+    public void setHp(int hp) {
+        this.hp = hp;
     }
     
 }
