@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.hunger_games.model;
+package byui.cit260.hunger_games.control;
 
 /**
  *
  * @author WINGU
  */
-public class Aid {
-        public static void main (String [] args){
-        
- 
+public class GameControl {
+    
+}
