@@ -11,4 +11,14 @@ package byui.cit260.hunger_games.control;
  */
 public class AidControl {
     
+    public double calcAidControl (double radius) {
+        
+       if ((radius < 1) || (radius > 20)) {
+           return -1;
+       }
+       
+               double volume = ( 4.0 / 3.0 ) * Math.PI * Math.pow(radius, 3 );
+                return volume;
+
+    }
 }
