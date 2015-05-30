@@ -11,4 +11,18 @@ package byui.cit260.hunger_games.control;
  */
 public class HarvestControl {
     
+    public double calcHarvControl (double height, double distance) {
+        
+       if ((height < 1) || (height > 20)) {
+           return -1;
+       }
+       
+        if ((distance < 1) || (distance > 20)) {
+           return -1;
+       }
+       
+                double diagonal = Math.sqrt((height * height) + (distance * distance)) ;
+                return diagonal;
+
+    }
 }
