@@ -7,8 +7,48 @@ package byui.cit260.hunger_games.control;
 
 /**
  *
- * @author WINGU
+ * @author  @author Katie Tooley
  */
+
+
 public class BattleControl {
-    
+   public static double battle_p(double player_number){
+        player_number = (Math.random()*((6-0)+0)) + (Math.pow(3, 2)) -3;
+        return player_number;
+   }
+   
+   public static double battle_t(double tribute_number){
+        tribute_number = (Math.random()*((6-0)+0)) + (Math.pow(3, 2)) -3;
+        return tribute_number;
+   }
+   
+    public double calcBattleControl (double player_number,double tribute_number ) {
+        
+       
+        
+        if (player_number > tribute_number){
+           System.out.println("You have given the tribute 25 damgage! ");
+       }
+       
+       else if (player_number < tribute_number){
+           System.out.println("You are hit! You lose 25 health points.");
+
+       }
+       
+       else if (player_number == tribute_number){
+           System.out.println("You and the tribute are hit. You both take 25 damage!");
+       }
+        
+        double hit = player_number;
+                return hit;
+    } 
 }
+       
+
+   
+        
+      
+   
+  
+
+
