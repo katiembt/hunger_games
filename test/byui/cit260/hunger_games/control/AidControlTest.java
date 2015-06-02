@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 /**
  *
  * @author WINGU
+ * @author Katie Tooley
  */
 public class AidControlTest {
     
