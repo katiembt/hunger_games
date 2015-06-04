@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.hunger_games.model;
+package byui.cit260.hunger_games.view;
 
 /**
  *
  * @author WINGU
  */
-public class Menu {
+public class MainMenuView {
+    startProgram() : void;
     
 }

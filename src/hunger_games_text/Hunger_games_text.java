@@ -12,6 +12,7 @@ import byui.cit260.hunger_games.model.Map;
 import byui.cit260.hunger_games.model.Player;
 import byui.cit260.hunger_games.model.Scene;
 import byui.cit260.hunger_games.model.Tributes;
+import byui.cit260.hunger_games.view.StartProgramView;
 
 /**
  *
@@ -22,6 +23,9 @@ import byui.cit260.hunger_games.model.Tributes;
 public class Hunger_games_text {
 
     public static void main(String[] args){
+        // startProgramView I guess
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
         //Player
        Player created = new Player();
        created.setName("?");
