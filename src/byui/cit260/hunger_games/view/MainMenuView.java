@@ -10,6 +10,6 @@ package byui.cit260.hunger_games.view;
  * @author WINGU
  */
 public class MainMenuView {
-    startProgram() : void;
+    startProgram (): void
     
 }

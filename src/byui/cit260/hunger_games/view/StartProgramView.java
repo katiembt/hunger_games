@@ -5,6 +5,9 @@
  */
 package byui.cit260.hunger_games.view;
 
+import byui.cit260.hunger_games.control.ProgramControl;
+import byui.cit260.hunger_games.model.Player;
+import java.util.Scanner;
 /**
  *
  * @author WINGU
@@ -14,7 +17,33 @@ public class StartProgramView {
    }
    public void startProgram () {
        this.displayBanner() ;
+       
+       String playerName = this.getPlayerName();
+       
+       Player player = ProgramControl.createPlayer(playerName);
+       
+       this.displayWelcomeMessage(player);
+       
+       }
+
+    private void displayBanner() {
+     
+    }
+
+    private String getPlayerName() {
+        
+    }
+
+    private void displayWelcomeMessage(Player player) {
+        
+    }
    }
+
+    public void displayWelcomeMessage(Player player) {
+           System.out.println("\n\n==========================================");
+           System.out.println("\tWelcome to the game" + player.getName());
+           System.out.println("\tWe hope you can survive.");
+           System.out.println("==========================================");
 
     private void displayBanner() {
        System.out.println("\n\n****************************************************************************************************");
@@ -36,5 +65,26 @@ public class StartProgramView {
                + "\n* Good luck and may the odds*"
                + "\n* be ever in your favor.*");
        
+    }
+
+    private String getPlayerName() {
+        boolean valid = false; // indicates f tthe name has been retreived 
+        String playerName = null;
+        Scanner keyboard = new Scanner(System.in); // keyboard input steam
+        
+        while(!valid) { //while a valid name has not been retireived
+            
+            System.out.println("Enter the player's name below");
+            
+            playerName = keyboard.nextLine();
+            playerName = playerName.trim();
+            
+            if (playerName.length() <2) {
+                System.out.println("Invalid name - the name must not be blank");
+                continue;
+            }
+            break;
+        }
+        return playerName;
     }
 }
