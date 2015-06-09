@@ -5,6 +5,8 @@
  */
 package byui.cit260.hunger_games.view;
 
+import byui.cit260.hunger_games.control.ProgramControl;
+import byui.cit260.hunger_games.model.Player;
 import java.io.InputStream;
 import java.util.Scanner;
 
@@ -16,10 +18,22 @@ public class StartProgramView {
    public StartProgramView() {
    }
    public void startProgram () {
+       //display banner
        this.displayBanner() ;
+       
+        //get players nam
+        String playersName = this.getPlayersName();
+        
+        //create and save object
+        Player player = ProgramControl.createPlayer(playersName);
+        
+        //Display welcome message
+        this.displayWelcomeMessage(player);
+        
+        //display main menu
    }
    
-    String playerName = this.getPlayersName();
+  
 
     private void displayBanner() {
        System.out.println("\n\n*************************************************");
@@ -63,6 +77,13 @@ public class StartProgramView {
             break;
         }
         return playersName;
+    }
+
+    private void displayWelcomeMessage(Player player) {
+        System.out.println("\n\n=============================================");
+        System.out.println("\tWelcome to to the Hunger Games" + player.getName());
+        System.out.println("\tMay the odds ever be in your favor.");
+        System.out.println("=================================================");
     }
 
     }

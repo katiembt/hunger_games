@@ -9,7 +9,7 @@ package byui.cit260.hunger_games.view;
  *
  * @author WINGU
  */
-public class MainMenuView {
-    startProgram() : void;
-    
-}
+////public class MainMenuView {
+////    startProgram() : void;
+//    
+//}
