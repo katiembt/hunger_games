@@ -14,6 +14,7 @@ import byui.cit260.hunger_games.model.Scene;
 import byui.cit260.hunger_games.model.Tributes;
 import byui.cit260.hunger_games.view.StartProgramView;
 
+
 /**
  *
  * @author WINGU 
@@ -26,7 +27,7 @@ public class Hunger_games_text {
         // startProgramView I guess
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
-        //Player
+    //Player
        Player created = new Player();
        created.setName("?");
        created.setGender("?");
@@ -76,12 +77,12 @@ public class Hunger_games_text {
         
          //Tribute two female
      Tributes twoF = new Tributes();
-        twoM.setName("Angel");
-        twoM.setGender("");
-        twoM.setDistrict("District 2");
-        twoM.setSkills("brick");
-        twoM.setHealthPoints(95);
-        twoM.setStrength(15);
+        twoF.setName("Angel");
+        twoF.setGender("");
+        twoF.setDistrict("District 2");
+        twoF.setSkills("brick");
+        twoF.setHealthPoints(95);
+        twoF.setStrength(15);
 
         String TributesTwoF = twoF.toString();
         System.out.println(twoF);
