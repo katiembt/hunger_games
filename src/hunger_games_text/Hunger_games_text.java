@@ -5,6 +5,7 @@
  */
 package hunger_games_text;
 
+import byui.cit260.hunger_games.model.Game;
 import byui.cit260.hunger_games.model.Inventory;
 import byui.cit260.hunger_games.model.Item;
 import byui.cit260.hunger_games.model.Location;
@@ -22,6 +23,9 @@ import byui.cit260.hunger_games.view.StartProgramView;
  * 
  */
 public class Hunger_games_text {
+    
+    private static Game currentGame = null;
+    private static Player player = null;
 
     public static void main(String[] args){
         // startProgramView I guess
@@ -162,5 +166,9 @@ public class Hunger_games_text {
 
             
     }  
+
+    public static void setPlayer(Player player) {
+        
+    }
     
 }
