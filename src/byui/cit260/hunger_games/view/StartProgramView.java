@@ -31,6 +31,8 @@ public class StartProgramView {
         this.displayWelcomeMessage(player);
         
         //display main menu
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMenu();
    }
    
   
@@ -81,7 +83,7 @@ public class StartProgramView {
 
     private void displayWelcomeMessage(Player player) {
         System.out.println("\n\n=============================================");
-        System.out.println("\tWelcome to to the Hunger Games" + player.getName());
+        System.out.println("\tWelcome to to the Hunger Games" + " " + player.getName());
         System.out.println("\tMay the odds ever be in your favor.");
         System.out.println("=================================================");
     }

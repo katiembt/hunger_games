@@ -167,8 +167,21 @@ public class Hunger_games_text {
             
     }  
 
-    public static void setPlayer(Player player) {
-        
+ 
+  
+    public static Game getCurrentGame(){
+        return currentGame;
     }
     
+    public static void setCurrentGame(Game currentGame){
+        Hunger_games_text.currentGame = currentGame;
+    }
+    
+    public static Player getPlayer(){
+        return player;
+    }
+    
+    public static void setPlayer(Player player){
+        Hunger_games_text.player = player;
+    }
 }
