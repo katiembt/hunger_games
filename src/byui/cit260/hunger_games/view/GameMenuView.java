@@ -10,5 +10,9 @@ package byui.cit260.hunger_games.view;
  * @author katherineblake
  */
 public class GameMenuView {
+
+    void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

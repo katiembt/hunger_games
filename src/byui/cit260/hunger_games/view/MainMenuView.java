@@ -94,12 +94,12 @@ public class MainMenuView {
     }
     
     
-
+   
     private void startNewGame() {
 //        System.out.println("*** startNewGame function called ***");
         //create new game
         
-        GameControl.createNewGame(Hunger_games.getPlayer());
+        GameControl.createNewGame(Hunger_games_text.getPlayer());
         
         //dsiplay Game menu
         GameMenuView gameMenu = new GameMenuView();
@@ -110,12 +110,35 @@ public class MainMenuView {
        System.out.println("*** startExistingGame function called***");
     }
 
-    private void displayHelpMenu() {
-        System.out.println("*** displayHelpManu function called***");
-    }
 
     private void saveGame() {
        System.out.println("*** saveGame function called***");
+    }
+
+    private void displayHelpMenu() {
+//        switch (choice){
+//            case 'G':
+//                this.helpGamePurpose();
+//                break;
+//             case 'M':
+//                this.helpMove();
+//                break;
+//            case 'B':
+//                this.helpBattle();
+//                break;
+//            case 'S':
+//                this.helpHarvest();
+//                break; 
+//            case 'S':
+//                this.helpFood();
+//                break;
+//            case 'Q':
+//                return;
+//            default:
+//                System.out.println("\n*** Invalid Selection *** Try Again");
+//                break;
+//                
+//        }
     }
     
 }
