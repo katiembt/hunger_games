@@ -117,29 +117,7 @@ public class MainMenuView {
     }
 
     private void displayHelpMenu() {
-//        switch (choice){
-//            case 'G':
-//                this.helpGamePurpose();
-//                break;
-//             case 'M':
-//                this.helpMove();
-//                break;
-//            case 'B':
-//                this.helpBattle();
-//                break;
-//            case 'S':
-//                this.helpHarvest();
-//                break; 
-//            case 'S':
-//                this.helpFood();
-//                break;
-//            case 'Q':
-//                return;
-//            default:
-//                System.out.println("\n*** Invalid Selection *** Try Again");
-//                break;
-//                
-//        }
+
     }
     
 }
