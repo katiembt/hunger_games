@@ -5,10 +5,16 @@
  */
 package byui.cit260.hunger_games.control;
 
+import byui.cit260.hunger_games.model.Player;
+
 /**
  *
  * @author WINGU
  */
 public class GameControl {
+
+    public static void createNewGame(Player player) {
+        
+    }
     
 }
