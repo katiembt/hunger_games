@@ -5,10 +5,16 @@
  */
 package byui.cit260.hunger_games.control;
 
+import byui.cit260.hunger_games.model.Player;
+
 /**
  *
  * @author WINGU
  */
 public class InventoryControl {
+
+    public static void viewItem(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
