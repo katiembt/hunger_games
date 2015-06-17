@@ -31,7 +31,7 @@ public class MainMenuView {
             + "\n----------------------------------------";
             
     
-    void displayMenu(){
+    public void displayMenu(){
         
         char selection = ' ';
         do { 
