@@ -9,7 +9,10 @@ package byui.cit260.hunger_games.view;
  *
  * @author katherineblake
  */
-public class HelpMenuView {
+public class HelpMenuView extends View {
+    
+    public HelpMenuView(){
+        super(
              switch (choice){
             case 'G':
                 this.helpGamePurpose();
@@ -30,7 +33,16 @@ public class HelpMenuView {
                 return;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
-                break;
+                break);
                 
         }
+              @Override
+        public boolean doAction(Object obj){
+            
+            String value = (String)obj;
+            
+            value = value.toUpperCase();
+            char choice = value.charAt(0);
+            
+}
 }

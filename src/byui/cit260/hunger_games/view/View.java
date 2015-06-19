@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.hunger_games.view;
-
+import java.io.InputStream;
 import java.util.Scanner;
 
 /**
@@ -13,6 +13,10 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
    private String promptMessage;
+   
+   public View (String promptMessage){
+       this.promptMessage = promptMessage;
+   }
     
    @Override
    public void display() {
@@ -29,19 +33,27 @@ public abstract class View implements ViewInterface {
    public String getInput() {
        Scanner keyboard = new Scanner(System.in);
        boolean valid = false;
-       String value = null;
+       String getInput = null;
        
        while (!valid) {
            
-           value = keyboard.nextLine():
-           value = value.trim();
+           getInput = keyboard.nextLine();
+           getInput = getInput.trim();
            
-           if (value.length() < 1) {
+           if (getInput.length() < 1) {
                System.out.println("You must enter a value.");
                continue;
            }
            break;
        }
-       return value;
+       return getInput;
+   }
+   
+   public String getPromptMessage(){
+       return promptMessage;
+   }
+   
+   public void setPromptMessage(String message){
+       this.promptMessage = message;
    }
 }
