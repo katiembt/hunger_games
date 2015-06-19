@@ -33,7 +33,7 @@ public abstract class View implements ViewInterface {
        
        while (!valid) {
            
-           value = keyboard.nextLine():
+           value = keyboard.nextLine();
            value = value.trim();
            
            if (value.length() < 1) {

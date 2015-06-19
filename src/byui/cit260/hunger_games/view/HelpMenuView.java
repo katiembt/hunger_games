@@ -10,8 +10,8 @@ package byui.cit260.hunger_games.view;
  * @author katherineblake
  */
 public class HelpMenuView {
-             switch (choice){
-            case 'G':
+             switch (choice) {
+             case 'G';
                 this.helpGamePurpose();
                 break;
              case 'M':
