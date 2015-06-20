@@ -37,8 +37,8 @@ public abstract class View implements ViewInterface {
        
        while (!valid) {
            
-           value = keyboard.nextLine();
-           value = value.trim();
+           getInput = keyboard.nextLine();
+           getInput = getInput.trim();
            
            if (getInput.length() < 1) {
                System.out.println("You must enter a value.");
