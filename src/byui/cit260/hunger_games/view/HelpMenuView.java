@@ -30,7 +30,7 @@ public class HelpMenuView extends View {
         String selection = (String)obj;
         switch (selection){
             case "G":
-                this.helpGamePurpose();
+               this.helpGamePurpose();
                 break;
              case "M":
                 this.helpMove();
