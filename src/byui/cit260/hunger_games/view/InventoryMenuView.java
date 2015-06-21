@@ -13,85 +13,96 @@ import java.util.Scanner;
  *
  * @author WINGU
  */
-public class InventoryMenuView {
-    private final String MENU ="\n"
+public class InventoryMenuView extends View {
+    public InventoryMenuView(){
+    super("\n"
             + "\n----------------------------------------"
             + "\n Inventory Menu                            |"
             + "\n----------------------------------------"
             + "\nV - View Item"
             + "\nU - Use Item"
             + "\nC - Close Inventory"
-            + "\n----------------------------------------";
-    void displayMenu(){
-        
-        char selection = ' ';
-        do { 
-        
-        System.out.println(MENU); //display Menu
-        
-        String input = this.getInput(); // get user selection
-        selection = input.charAt(0); //getfirst character of string
-        
-        this.doAction(selection);     //do action based on selction
-        
-        } while (selection != 'C'); //an sel is not "EXIT"
-    }
-
-    private String getInput() {
-        boolean valid = false; 
-        String getInput = null;
-        Scanner keyboard = new Scanner(System.in);
-        
-        while(!valid){
+            + "\n----------------------------------------");
+    } @Override
+        public boolean doAction(Object obj){
             
-            System.out.println("What do you want to do in the inventory?:");
+            String value = (String)obj;
             
-           getInput = keyboard.nextLine();
-           getInput = getInput.trim();
+            value = value.toUpperCase();
+            char choice = value.charAt(0);
             
-            if(getInput.length() < 1){
-                System.out.println("Invalid Input - the Input must not be blank");
-                continue;
-                
-            }
-            break;
-        }
-        return getInput;
-        
-        
-    }
-
-    private void doAction(char choice) {
-        
-        switch (choice){
-            case 'V':
-                this.viewItem();
-                break;
-             case 'U':
-                this.useFromInventory();
-                break;
-            case 'C':
-                return;
-            default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
-                break;
-                
-        }
-    }
     
-    
-   
-    private void viewItem() {
-        
-        InventoryControl.viewItem(Hunger_games_text.getPlayer());
-        
-        InventoryMenuView inventoryMenu = new InventoryMenuView();
-        inventoryMenu.displayMenu();
-    }
-
-    private void useFromInventory() {
-       System.out.println("***Would you like to use ***? ***");
-    }
-
-
 }
+//    void displayMenu(){
+//        
+//        char selection = ' ';
+//        do { 
+//        
+//        System.out.println(MENU); //display Menu
+//        
+//        String input = this.getInput(); // get user selection
+//        selection = input.charAt(0); //getfirst character of string
+//        
+//        this.doAction(selection);     //do action based on selction
+//        
+//        } while (selection != 'C'); //an sel is not "EXIT"
+//    }
+//
+//    private String getInput() {
+//        boolean valid = false; 
+//        String getInput = null;
+//        Scanner keyboard = new Scanner(System.in);
+//        
+//        while(!valid){
+//            
+//            System.out.println("What do you want to do in the inventory?:");
+//            
+//           getInput = keyboard.nextLine();
+//           getInput = getInput.trim();
+//            
+//            if(getInput.length() < 1){
+//                System.out.println("Invalid Input - the Input must not be blank");
+//                continue;
+//                
+//            }
+//            break;
+//        }
+//        return getInput;
+//        
+//        
+//    }
+//
+//    private void doAction(char choice) {
+//        
+//        switch (choice){
+//            case 'V':
+//                this.viewItem();
+//                break;
+//             case 'U':
+//                this.useFromInventory();
+//                break;
+//            case 'C':
+//                return;
+//            default:
+//                System.out.println("\n*** Invalid Selection *** Try Again");
+//                break;
+//                
+//        }
+//    }
+//    
+//    
+//   
+//    private void viewItem() {
+//        
+//        InventoryControl.viewItem(Hunger_games_text.getPlayer());
+//        
+//        InventoryMenuView inventoryMenu = new InventoryMenuView();
+//        inventoryMenu.displayMenu();
+//    }
+//
+//    private void useFromInventory() {
+//       System.out.println("***Would you like to use ***? ***");
+//    }
+//
+//
+//}

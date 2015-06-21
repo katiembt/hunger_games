@@ -9,10 +9,25 @@ package byui.cit260.hunger_games.view;
  *
  * @author katherineblake
  */
-public class GameMenuView {
-
-    void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+public class GameMenuView extends View {
     
+    public GameMenuView(){
+        super()
+                
+        
+    }
+     @Override
+        public boolean doAction(Object obj){
+            
+            String value = (String)obj;
+            
+            value = value.toUpperCase();
+            char choice = value.charAt(0);
+            
 }
+
+//    void display() {
+//       
+//    }
+//    
+//}

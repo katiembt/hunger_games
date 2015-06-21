@@ -9,28 +9,47 @@ package byui.cit260.hunger_games.view;
  *
  * @author katherineblake
  */
-public class HelpMenuView {
-             switch (choice) {
-             case 'G';
-                this.helpGamePurpose();
+public class HelpMenuView extends View {
+
+    public HelpMenuView(String promptMessage) {
+        super( "\n"
+            + "\n----------------------------------------"
+            + "\n| Help Menu                           |"
+            + "\n----------------------------------------"
+            + "\nG - Start Game"
+            + "\nH - get Help on How to Play the Game"
+            + "\nS - Save Game"
+            + "\nE - Exit Game"
+            + "\n----------------------------------------");
+        
+    }
+     
+        
+              @Override
+    public boolean doAction(Object obj){
+        String selection = (String)obj;
+        switch (selection){
+            case "G":
+               this.helpGamePurpose();
                 break;
-             case 'M':
+             case "M":
                 this.helpMove();
                 break;
-            case 'B':
+            case "B":
                 this.helpBattle();
                 break;
-            case 'S':
+            case "S":
                 this.helpHarvest();
                 break; 
-            case 'S':
+            case "S":
                 this.helpFood();
                 break;
-            case 'Q':
+            case "Q":
                 return;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
-                
+
         }
+    }
 }
