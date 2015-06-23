@@ -4,56 +4,64 @@
  * and open the template in the editor.
  */
 package byui.cit260.hunger_games.view;
-import java.io.InputStream;
 import java.util.Scanner;
 
 /**
  *
- * @author WINGU
+ * @author Wingu
  */
 public abstract class View implements ViewInterface {
-   private String promptMessage;
-   
-   public View (String promptMessage){
-       this.promptMessage = promptMessage;
-   }
     
-   @Override
-   public void display() {
-       String value = "";
-       boolean done = false;
-       
-       do {
-           System.out.println(this.promptMessage);
-           value = this.getInput();
-           done = this.doAction(value);
-       } while(!done);
-   } 
-   @Override
-   public String getInput() {
-       Scanner keyboard = new Scanner(System.in);
-       boolean valid = false;
-       String getInput = null;
-       
-       while (!valid) {
-           
-           getInput = keyboard.nextLine();
-           getInput = getInput.trim();
-           
-           if (getInput.length() < 1) {
-               System.out.println("You must enter a value.");
-               continue;
-           }
-           break;
-       }
-       return getInput;
-   }
-   
-   public String getPromptMessage(){
-       return promptMessage;
-   }
-   
-   public void setPromptMessage(String message){
-       this.promptMessage = message;
-   }
+    private String promptMessage;
+    
+    public View(String promptMessage) {
+        this.promptMessage= promptMessage;
+    }
+
+    public String getPromptMessage() {
+        return promptMessage;
+    }
+
+    public void setPromptMessage(String promptMessage) {
+        this.promptMessage = promptMessage;
+    }
+    
+@Override
+public void display() {
+        
+        char selection = ' ';
+        do {
+            System.out.println(promptMessage);
+            
+            String input = this.getInput();
+            selection = input.charAt(0);
+            
+            this.doAction(selection);
+            
+        } while(selection != 'B' && selection !='b' && selection !='Q' && selection !='q');
+        
+    }
+        
+    @Override
+    public String getInput() {
+        boolean valid = false;
+        Scanner keyboard=new Scanner(System.in);
+        String menuItem ="";
+        
+        while(!valid) {
+            
+            System.out.println("Please make a selection.");
+
+            menuItem = keyboard.nextLine();
+            menuItem = menuItem.trim();
+            
+            if(menuItem.length()< 1) {
+                System.out.println("Invalid option, please try again");
+                continue;
+            }
+            break;
+        }
+        
+        return menuItem;
+    }
 }

@@ -5,51 +5,120 @@
  */
 package byui.cit260.hunger_games.view;
 
+import java.util.Scanner;
 /**
  *
  * @author katherineblake
  */
 public class HelpMenuView extends View {
-
-    public HelpMenuView(String promptMessage) {
-        super( "\n"
-            + "\n----------------------------------------"
-            + "\n| Help Menu                           |"
-            + "\n----------------------------------------"
-            + "\nG - Start Game"
-            + "\nH - get Help on How to Play the Game"
-            + "\nS - Save Game"
-            + "\nE - Exit Game"
-            + "\n----------------------------------------");
-        
-    }
-     
-        
-              @Override
-    public boolean doAction(Object obj){
-        String selection = (String)obj;
-        switch (selection){
-            case "G":
-               this.helpGamePurpose();
-                break;
-             case "M":
-                this.helpMove();
-                break;
-            case "B":
-                this.helpBattle();
-                break;
-            case "S":
-                this.helpHarvest();
-                break; 
-            case "S":
-                this.helpFood();
-                break;
-            case "Q":
-                return;
-            default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
-                break;
-
+    
+        public HelpMenuView() {
+            super("\n"
+            +"\n----------------------------------------------"
+            +"\n| Help Menu                                  |"
+            +"\n----------------------------------------------"
+            +"\nO - Objective"
+            +"\nM - Move "
+            +"\nA - Aid Packages"
+            +"\nI - View inventory"
+            +"\nF - Food"
+            +"\nB - Battle"        
+            +"\nR - Return"
+            +"\n----------------------------------------------");
+            
         }
+        
+        @Override
+    public boolean doAction(Object obj) {
+        
+        char selection = (char) obj;
+        
+        switch(selection){
+            case 'O':
+            case 'o':
+                this.viewObjectivesHelp();
+                break;
+            case 'M':
+            case 'm':
+                this.viewMoveHelp();
+                break;
+            case 'A':
+            case 'a':
+                this.viewAidHelp();
+                break;
+            case 'I':
+            case 'i':
+                this.viewInventoryHelp();
+                break;
+            case 'B':
+            case 'b':
+                this.viewBattleHelp();
+                break;   
+             case 'F':
+            case 'f':
+                this.viewFoodHelp();
+                break;    
+            case 'R':
+            case 'r':
+                return false;
+            default:
+                System.out.println("\n*** Invalid selection, try again. ***");
+                break;
+        }
+        return true;
     }
+    
+    private void viewObjectivesHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n|            The Objective                 |"
+                            +"\n********************************************"
+                            +"\n* The objective of the game is to survive. *"
+                            +"\n*                                          *"
+                            +"\n* You do so by killing all other tributes. *"
+                            +"\n* If you fail to kill them they will kill  *"
+                            +"\n* you.Last tribute standing wins.          *"
+                            +"\n*                                          *"
+                            +"\n********************************************");
+                   
+    }
+
+    private void viewMoveHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n************** Move Help*** ****************"
+                            +"\n* To move in this game you will first look  *"
+                            +"\n* at the map.After you have located your   *"
+                            +"\n* current position and the position you wish  *"
+                            +"\n* to   *"                      
+                            +"\n********************************************");
+    
+    }
+
+    private void viewAidHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n************* Aid Help **************"
+                            +"\n********************************************");
+    }
+
+    private void viewInventoryHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n*************** Inventory ******************"
+                            +"\n********************************************");
+    }
+    
+     private void viewBattleHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n*************** BATTLE    ******************"
+                            +"\n********************************************");
+    }
+     private void viewFoodHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n*************** Food Help ******************"
+                            +"\n********************************************");
+    }
+
+    private void viewMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
+    
 }
