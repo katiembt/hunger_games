@@ -13,90 +13,52 @@ import java.util.Scanner;
  */
 public class AidControlView extends View {
     
-        public AidControlView(){
-p           super("\n"
-            + "\n----------------------------------------"
-            + "\n| Aid Control Menu                                                  |"
-            + "\n----------------------------------------"
-            + "\nV - Calcuate the Volume"
-            + "\nR - Find the Radius"
-            + "\nQ - Quit, I don't need any aid. "
-            + "\n----------------------------------------");
+        public AidControlView() {
+            super("\n"
+            +"\n----------------------------------------------"
+            +"\n| Aid View                                 |"
+            +"\n----------------------------------------------"
+            +"\nO - Open Aid"     
+            +"\nR - Return"
+            +"\n----------------------------------------------");
+            
         }
-         @Override
-        public boolean doAction(Object obj){
-            
-            String value = (String)obj;
-            
-            value = value.toUpperCase();
-            char choice = value.charAt(0);
-            
-}
-}
+        
+        @Override
+    public boolean doAction(Object obj) {
+        
+        char selection = (char) obj;
+        
+        switch(selection){
+            case 'O':
+            case 'o':
+                this.viewOpenAid();
+                break;
+            case 'R':
+            case 'r':
+                return false;
+            default:
+                System.out.println("\n*** Invalid selection, try again. ***");
+                break;
+        }
+        return true;
+    }
     
-//    void displayMenu(){
-//        
-//        char selection = ' ';
-//        do { 
-//        
-//        System.out.println(MENU); //display Menu
-//        
-//        String input = this.getInput(); // get user selection
-//        selection = input.charAt(0); //getfirst character of string
-//        
-//        this.doAction(selection);     //do action based on selction
-//        
-//        } while (selection != 'Q'); //an sel is not "EXIT"
-//    }
-//
-//    private String getInput() {
-//        boolean valid = false; 
-//        String getInput = null;
-//        Scanner keyboard = new Scanner(System.in);
-//        
-//        while(!valid){
-//            
-//            System.out.println("Enter The letter of your Selection Below:");
-//            
-//           getInput = keyboard.nextLine();
-//           getInput = getInput.trim();
-//            
-//            if(getInput.length() < 1){
-//                System.out.println("Invalid Input - the Input must not be blank");
-//                continue;
-//                
-//            }
-//            break;
-//        }
-//        return getInput;
-//        
-//        
-//    }
-//
-//    private void doAction(char choice) {
-//        
-//        switch (choice){
-//            case 'V':
-//                this.getVolume();
-//                break;
-//             case 'R':
-//                this.getRadius();
-//                return;
-//            default:
-//                System.out.println("\n*** Invalid Selection *** Try Again");
-//                break;
-//                
-//        }
-//    }
-//    
-//    
-//   
-//    private void getVolume() {      
-//        System.out.println("*** Please calculate the volume of the spheracle aid item to recieve the aid within.***");
-//    }
-//
-//    private void getRadius() {
-//       System.out.println("*** The radius of the aid is *** inches. ***");
-//    }
-//    
-//}
+    private void viewOpenAid() {
+        System.out.println("\n\n********************************************"
+                            +"\n|            Open Aid                      |"
+                            +"\n********************************************"
+                            +"\n* Answer the question correctly to open the *"
+                            +"\n*  Aid package.                             *"
+                            +"\n********************************************");
+                   
+    }
+
+   
+
+    private void viewMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
+    
+}

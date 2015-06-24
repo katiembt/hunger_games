@@ -13,90 +13,63 @@ import java.util.Scanner;
  *
  * @author katherineblake
  */
-public class BattleMenuView extends View{
+public class BattleMenuView extends View {
     
-    public BattleMenuView(){
-        super("\n"
-            + "\n----------------------------------------"
-            + "\n| Battle Menu                                                  |"
-            + "\n----------------------------------------"
-            + "\nF - Flee From Enemy"
-            + "\nB - Take Chance and Brawl"
-            + "\n----------------------------------------");        
+        public BattleMenuView() {
+            super("\n"
+            +"\n----------------------------------------------"
+            +"\n| Aid View                                 |"
+            +"\n----------------------------------------------"
+            +"\nO - Open Aid"     
+            +"\nR - Return"
+            +"\n----------------------------------------------");
+            
+        }
+        
+        @Override
+    public boolean doAction(Object obj) {
+        
+        char selection = (char) obj;
+        
+        switch(selection){
+            case 'O':
+            case 'o':
+                this.viewOpenAid();
+                break;
+            case 'R':
+            case 'r':
+                this.viewFlee();
+            default:
+                System.out.println("\n*** Invalid selection, try again. ***");
+                break;
+        }
+        return true;
     }
-     @Override
-        public boolean doAction(Object obj){
-            
-            String value = (String)obj;
-            
-            value = value.toUpperCase();
-            char choice = value.charAt(0);
-            
-}
     
-//    void displayMenu(){
-//        
-//        char selection = ' ';
-//        do { 
-//        
-//        System.out.println(MENU); //display Menu
-//        
-//        String input = this.getInput(); // get user selection
-//        selection = input.charAt(0); //getfirst character of string
-//        
-//        this.doAction(selection);     //do action based on selction
-//        
-//        } while (selection != 'E'); //an sel is not "EXIT"
-//    }
-//
-//    private String getInput() {
-//        boolean valid = false; 
-//        String getInput = null;
-//        Scanner keyboard = new Scanner(System.in);
-//        
-//        while(!valid){
-//            
-//            System.out.println("Enter The letter of your Selection Below:");
-//            
-//           getInput = keyboard.nextLine();
-//           getInput = getInput.trim();
-//            
-//            if(getInput.length() < 1){
-//                System.out.println("Invalid Input - the Input must not be blank");
-//                continue;
-//                
-//            }
-//            break;
-//        }
-//        return getInput;
-//        
-//        
-//    }
-//
-//    private void doAction(char choice) {
-//        
-//        switch (choice){
-//            case 'F':
-//                this.flee();
-//                break;
-//             case 'B':
-//                this.getRoll();
-//                return;
-//            default:
-//                System.out.println("\n*** Invalid Selection *** Try Again");
-//                break;
-//                
-//        }
-//    }
-//    
-//    
-//   
-//    private void flee() {      
-//        System.out.println("*** You have fled, but at a cost of 10% of your health***");
-//    }
-//
-//    private void getRoll() {
-//       System.out.println("*** You make your move and atacked ***");
-//    }
-//    
-//}
+    private void viewOpenAid() {
+        System.out.println("\n\n********************************************"
+                            +"\n|          BATTLE!!!                     |"
+                            +"\n********************************************"
+                            +"\n* You have decided to fight                *"
+                            +"\n*                                           *"
+                            +"\n********************************************");
+                   
+    }
+        private void viewFlee() {
+        System.out.println("\n\n********************************************"
+                            +"\n|            RUNNNNN!!!!                   |"
+                            +"\n********************************************"
+                            +"\n* You have decided to run!                 *"
+                            +"\n*                                          *"
+                            +"\n********************************************");
+                   
+    }
+
+   
+
+    private void viewMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
+    
+}

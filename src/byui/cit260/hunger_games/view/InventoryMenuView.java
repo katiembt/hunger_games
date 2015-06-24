@@ -14,95 +14,54 @@ import java.util.Scanner;
  * @author WINGU
  */
 public class InventoryMenuView extends View {
-    public InventoryMenuView(){
-    super("\n"
-            + "\n----------------------------------------"
-            + "\n Inventory Menu                            |"
-            + "\n----------------------------------------"
-            + "\nV - View Item"
-            + "\nU - Use Item"
-            + "\nC - Close Inventory"
-            + "\n----------------------------------------");
-    } @Override
-        public boolean doAction(Object obj){
+    
+        public InventoryMenuView() {
+            super("\n"
+            +"\n----------------------------------------------"
+            +"\n| Inventory menu View                        |"
+            +"\n----------------------------------------------"
+            +"\nO - Open Inventory"     
+            +"\nR - Return"
+            +"\n----------------------------------------------");
             
-            String value = (String)obj;
-            
-            value = value.toUpperCase();
-            char choice = value.charAt(0);
-            
+        }
+        
+        @Override
+    public boolean doAction(Object obj) {
+        
+        char selection = (char) obj;
+        
+        switch(selection){
+            case 'O':
+            case 'o':
+                this.viewInventory();
+                break;
+            case 'R':
+            case 'r':
+                this.viewFlee();
+            default:
+                System.out.println("\n*** Invalid selection, try again. ***");
+                break;
+        }
+        return true;
+    }
+    
+    private void viewInventory() {
+        System.out.println("\n\n********************************************"
+                            +"\n|          Your Current Inventory          |"
+                            +"\n********************************************"
+                            +"\n* Items            *"
+                            +"\n*                                           *"
+                            +"\n********************************************");
+                   
+    }
+     
+
+   
+
+    private void viewMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
     
 }
-//    void displayMenu(){
-//        
-//        char selection = ' ';
-//        do { 
-//        
-//        System.out.println(MENU); //display Menu
-//        
-//        String input = this.getInput(); // get user selection
-//        selection = input.charAt(0); //getfirst character of string
-//        
-//        this.doAction(selection);     //do action based on selction
-//        
-//        } while (selection != 'C'); //an sel is not "EXIT"
-//    }
-//
-//    private String getInput() {
-//        boolean valid = false; 
-//        String getInput = null;
-//        Scanner keyboard = new Scanner(System.in);
-//        
-//        while(!valid){
-//            
-//            System.out.println("What do you want to do in the inventory?:");
-//            
-//           getInput = keyboard.nextLine();
-//           getInput = getInput.trim();
-//            
-//            if(getInput.length() < 1){
-//                System.out.println("Invalid Input - the Input must not be blank");
-//                continue;
-//                
-//            }
-//            break;
-//        }
-//        return getInput;
-//        
-//        
-//    }
-//
-//    private void doAction(char choice) {
-//        
-//        switch (choice){
-//            case 'V':
-//                this.viewItem();
-//                break;
-//             case 'U':
-//                this.useFromInventory();
-//                break;
-//            case 'C':
-//                return;
-//            default:
-//                System.out.println("\n*** Invalid Selection *** Try Again");
-//                break;
-//                
-//        }
-//    }
-//    
-//    
-//   
-//    private void viewItem() {
-//        
-//        InventoryControl.viewItem(Hunger_games_text.getPlayer());
-//        
-//        InventoryMenuView inventoryMenu = new InventoryMenuView();
-//        inventoryMenu.displayMenu();
-//    }
-//
-//    private void useFromInventory() {
-//       System.out.println("***Would you like to use ***? ***");
-//    }
-//
-//
-//}
