@@ -83,19 +83,24 @@ public class HelpMenuView extends View {
     }
 
     private void viewMoveHelp() {
-        System.out.println("\n\n********************************************"
-                            +"\n************** Move Help*** ****************"
-                            +"\n* To move in this game you will first look  *"
-                            +"\n* at the map.After you have located your   *"
-                            +"\n* current position and the position you wish  *"
-                            +"\n* to   *"                      
-                            +"\n********************************************");
+        System.out.println("\n\n*********************************************"
+                            +"\n************** Move Help*** *****************"
+                            +"\n* To move in this game you will nee to find *"
+                            +"\n* your current location. To do so select    *"
+                            +"\n* the map or 'M'. Now that the map is open  *"
+                            +"\n* find the location you want to move to     *"
+                            +"\n* you can only move one sqaure at a time    *"
+                            +"\n* yso choose wisely.                        *"
+                            +"\n*********************************************");
     
     }
 
     private void viewAidHelp() {
         System.out.println("\n\n********************************************"
-                            +"\n************* Aid Help **************"
+                            +"\n************* Aid Help *********************"
+                            +"\n* To open an aid package you must input    *"
+                            +"\n* the correct information. If the info  is *"
+                            +"\n*is correct you will be open the aid.      *"
                             +"\n********************************************");
     }
 
