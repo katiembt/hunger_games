@@ -11,23 +11,35 @@ package byui.cit260.hunger_games.view;
  */
 public class GameMenuView extends View {
     
-    public GameMenuView(){
-        super()
-                
+        public GameMenuView() {
+            super("\n"
+            +"\n----------------------------------------------");
+            
+        }
         
+        @Override
+    public boolean doAction(Object obj) {
+        
+        char selection = (char) obj;
+        
+        switch(selection){   
+            case 'R':
+            case 'r':
+                return false;
+            default:
+                System.out.println("\n*** Invalid selection, try again. ***");
+                break;
+        }
+        return true;
     }
-     @Override
-        public boolean doAction(Object obj){
-            
-            String value = (String)obj;
-            
-            value = value.toUpperCase();
-            char choice = value.charAt(0);
-            
-}
+    
+ 
 
-//    void display() {
-//       
-//    }
-//    
-//}
+   
+
+    private void viewMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
+    
+}

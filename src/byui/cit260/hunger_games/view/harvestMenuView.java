@@ -11,83 +11,52 @@ import java.util.Scanner;
  *
  * @author katherineblake
  */
-public class InventoryMenuView extends View{
-     
-    public InventoryMenuView(){
-    super("\n"
-            + "\n----------------------------------------"
-            + "\n| Harvest Main Menu                    |"
-            + "\n----------------------------------------"
-            + "\nH - Harvest"
-            + "\nE - Exit Harvest"
-            + "\n----------------------------------------");
-}
-     @Override
-        public boolean doAction(Object obj){
-            
-            String value = (String)obj;
-            
-            value = value.toUpperCase();
-            char choice = value.charAt(0);
-            
-}
+public class harvestMenuView extends View {
     
-//    void displayMenu(){
-//        
-//        char selection = ' ';
-//        do { 
-//        
-//        System.out.println(MENU); //display Menu
-//        
-//        String input = this.getInput(); // get user selection
-//        selection = input.charAt(0); //getfirst character of string
-//        
-//        this.doAction(selection);     //do action based on selction
-//        
-//        } while (selection != 'E'); //an sel is not "EXIT"
-//    }
-//
-//    private String getInput() {
-//        boolean valid = false; 
-//        String getInput = null;
-//        Scanner keyboard = new Scanner(System.in);
-//        
-//        while(!valid){
-//            
-//            System.out.println("Enter The letter of your Selection Below:");
-//            
-//           getInput = keyboard.nextLine();
-//           getInput = getInput.trim();
-//            
-//            if(getInput.length() < 1){
-//                System.out.println("Invalid Input - the Input must not be blank");
-//                continue;
-//                
-//            }
-//            break;
-//        }
-//        return getInput;
-//        
-//        
-//    }
-//
-//    private void doAction(char choice) {
-//        
-//        switch (choice){
-//            case 'H':
-//                this.displayHarvestMenu();
-//                break; 
-//            case 'E':
-//                return;
-//            default:
-//                System.out.println("\n*** Invalid Selection *** Try Again");
-//                break;
-//                
-//        }
-//    }
-//
-//    private void displayHarvestMenu() {
-//        System.out.println("*** displayHarvestMenu function called***");
-//    }
-//     
-//}
+        public harvestMenuView() {
+            super("\n"
+            +"\n----------------------------------------------"
+            +"\n| Harvest                                     |"
+            +"\n----------------------------------------------"
+              +"\nS - Harvest"            
+            +"\nR - Return"
+            +"\n----------------------------------------------");
+            
+        }
+        
+        @Override
+    public boolean doAction(Object obj) {
+        
+        char selection = (char) obj;
+        
+        switch(selection){
+            case 'H':
+            case 'h':
+                this.viewHarvest();
+                break;   
+            case 'R':
+            case 'r':
+                return false;
+            default:
+                System.out.println("\n*** Invalid selection, try again. ***");
+                break;
+        }
+        return true;
+    }
+    
+    private void viewHarvest() {
+        System.out.println("\n\n********************************************"
+                            +"\n|            Map                           |"
+                            +"\n********************************************"
+                            +"\n* Answer the question correctly to open the *"
+                            +"\n*  Aid package.                             *"
+                            +"\n********************************************");
+                   
+    }
+
+    private void viewMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
+    
+}

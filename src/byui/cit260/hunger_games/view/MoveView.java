@@ -16,8 +16,8 @@ public class MoveView extends View {
             +"\n----------------------------------------------"
             +"\n| Move                                       |"
             +"\n----------------------------------------------"
-            +"\nM - Select Map"     
-            +"\nM - Map"          
+            +"\nS - Select Map"     
+            +"\nM - Move"          
             +"\nR - Return"
             +"\n----------------------------------------------");
             
@@ -29,10 +29,14 @@ public class MoveView extends View {
         char selection = (char) obj;
         
         switch(selection){
-            case 'M':
-            case 'm':
+            case 'S':
+            case 's':
                 this.viewSelectMap();
                 break;
+            case 'M':
+            case 'm':
+                this.viewMove();
+                break;    
             case 'R':
             case 'r':
                 return false;
@@ -43,12 +47,21 @@ public class MoveView extends View {
         return true;
     }
     
-    private void viewOpenAid() {
+    private void viewSelectMap() {
         System.out.println("\n\n********************************************"
-                            +"\n|            Open Aid                      |"
+                            +"\n|            Map                           |"
                             +"\n********************************************"
                             +"\n* Answer the question correctly to open the *"
                             +"\n*  Aid package.                             *"
+                            +"\n********************************************");
+                   
+    }
+      private void viewMove() {
+        System.out.println("\n\n********************************************"
+                            +"\n|            Move                          |"
+                            +"\n********************************************"
+                            +"\n* Where do you wantt to move?                *"
+                            +"\n*                                          *"
                             +"\n********************************************");
                    
     }

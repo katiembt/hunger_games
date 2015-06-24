@@ -9,32 +9,53 @@ package byui.cit260.hunger_games.view;
  *
  * @author katherineblake
  */
-public class eatView extends View{
-
+public class eatView extends View {
     
-    public eatView(){
-        super("\n"
-            + "\n----------------------------------------"
-            + "\n| Food                                 |"
-            + "\n----------------------------------------"
-            + "\nE - Eat Food"
-            + "\nQ - Quit"
-            + "\n----------------------------------------");        
-    }
-      @Override
-    public boolean doAction(Object obj){
-        String selection = (String)obj;
-        switch (selection){
-            case "E":
-               this.eatFood();
-                break;
-            case "Q":
-                return;
-            default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
-                break;
-
-        }
+        public eatView() {
+            super("\n"
+            +"\n----------------------------------------------"
+            +"\n| Eat                                       |"
+            +"\n----------------------------------------------"   
+            +"\nE - Eat"          
+            +"\nR - Return"
+            +"\n----------------------------------------------");
             
-}
+        }
+        
+        @Override
+    public boolean doAction(Object obj) {
+        
+        char selection = (char) obj;
+        
+        switch(selection){
+            case 'E':
+            case 'e':
+                this.viewEat();
+                break;    
+            case 'R':
+            case 'r':
+                return false;
+            default:
+                System.out.println("\n*** Invalid selection, try again. ***");
+                break;
+        }
+        return true;
+    }
+    
+    private void viewEat() {
+        System.out.println("\n\n********************************************"
+                            +"\n|            Eat                           |"
+                            +"\n********************************************"
+                            +"\n* Eat Food *"                   
+                            +"\n********************************************");
+                   
+    }
+
+   
+
+    private void viewMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
+    
 }

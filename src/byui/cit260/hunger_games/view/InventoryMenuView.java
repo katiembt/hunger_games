@@ -38,7 +38,6 @@ public class InventoryMenuView extends View {
                 break;
             case 'R':
             case 'r':
-                this.viewFlee();
             default:
                 System.out.println("\n*** Invalid selection, try again. ***");
                 break;
