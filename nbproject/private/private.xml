@@ -4,11 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/BattleMenuView.java</file>
+            <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/eatView.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/AidControlView.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/View.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/HelpMenuView.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/InventoryMenuView.java</file>
+            <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/MapControlView.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/MainMenuView.java</file>
+            <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/GameMenuView.java</file>
+            <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/harvestMenuView.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/StartProgramView.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/view/MoveView.java</file>
         </group>

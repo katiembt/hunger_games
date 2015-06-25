@@ -13,6 +13,7 @@ public class GameMenuView extends View {
     
         public GameMenuView() {
             super("\n"
+            +"\nR- Return-------------------------------------"        
             +"\n----------------------------------------------");
             
         }

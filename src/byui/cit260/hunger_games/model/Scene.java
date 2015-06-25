@@ -5,67 +5,50 @@
  */
 package byui.cit260.hunger_games.model;
 
-import java.util.Objects;
+import java.awt.Point;
+import java.io.Serializable;
 
 /**
  *
  * @author WINGU
  */
-public class Scene {
-    private String goodEncounter;
-    private String badEncounter;
-
-    public Scene() {
-    }
-
-    @Override
-    public String toString() {
-        return "Scene{" + "goodEncounter=" + goodEncounter + ", badEncounter=" + badEncounter + '}';
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.goodEncounter);
-        hash = 79 * hash + Objects.hashCode(this.badEncounter);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Scene other = (Scene) obj;
-        if (!Objects.equals(this.goodEncounter, other.goodEncounter)) {
-            return false;
-        }
-        if (!Objects.equals(this.badEncounter, other.badEncounter)) {
-            return false;
-        }
-        return true;
-    }
-
+public enum Scene implements Serializable{
+  
+    Swamp("Swamp",new Point (1,2),"Kat"),
+    Lake("Lake",new Point (1,2),"Lary"),
+    Forest("Forest",new Point (1,2),"Fred"),
+    Mountain("Mountain",new Point (1,2),"Fiona");
     
-    
-    public String getGoodEncounter() {
-        return goodEncounter;
+    private final String location;
+    private final Point coordinates;
+    private final String tribute;
+
+
+
+    Scene(String location, Point coordinates, String tribute) {
+        this.location = location;
+        this.tribute = tribute;
+        this.coordinates = coordinates;
     }
 
-    public void setGoodEncounter(String goodEncounter) {
-        this.goodEncounter = goodEncounter;
+
+    public String getLocation() {
+        return location;
     }
 
-    public String getBadEncounter() {
-        return badEncounter;
+    public String getTribute() {
+        return tribute;
     }
 
-    public void setBadEncounter(String badEncounter) {
-        this.badEncounter = badEncounter;
+     public Point getCoordinates() {
+        return coordinates;
     }
-    
-    
+
 }
+
+
+    
+    
+
+     
+ 

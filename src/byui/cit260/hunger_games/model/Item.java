@@ -5,72 +5,39 @@
  */
 package byui.cit260.hunger_games.model;
 
+import java.awt.Point;
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
  * @author katherineblake
  */
-public class Item implements Serializable{
-     private String name;
-     private int hp;
-
-    public Item() {
-    }
+public enum Item implements Serializable{
+  
+    itemOne("knife","apple"),
+    itemTwo("knife","apple"),
+    itemThree("knife","apple"),
+    itemFour("knife","apple");
     
-    public Item(String myName, int myHP) {
-        this.name = myName;
-        this.hp = myHP;
+    private final String weapon;
+    private final String food;
+
+
+
+
+    Item(String weapon, String food) {
+        this.weapon = weapon;
+        this.food = food;
     }
 
-    @Override
-    public String toString() {
-        return "Item{" + "name=" + name + ", hp=" + hp + '}';
+
+    public String getWeapon() {
+        return weapon;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.name);
-        hash = 59 * hash + this.hp;
-        return hash;
+    public String getFood() {
+        return food;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Item other = (Item) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (this.hp != other.hp) {
-            return false;
-        }
-        return true;
-    }
- 
-    
-    
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
-    
 }
