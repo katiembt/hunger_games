@@ -10,5 +10,10 @@ package byui.cit260.hunger_games.control;
  * @author WINGU
  */
 public class MapControl {
+    Map map = new Map(20,20);
+    
+    Scene[] scenes = createScenes(); 
+    
+    assignScencesToLocation (map,scenes); 
     
 }

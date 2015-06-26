@@ -14,10 +14,10 @@ import java.io.Serializable;
  */
 public enum Scene implements Serializable{
   
-    Swamp("Swamp",new Point (1,2),"Kat"),
-    Lake("Lake",new Point (1,2),"Lary"),
-    Forest("Forest",new Point (1,2),"Fred"),
-    Mountain("Mountain",new Point (1,2),"Fiona");
+    Swamp("Swamp",new Point (1,1),"Kat"),
+    Lake("Lake",new Point (1,3),"Lary"),
+    Forest("Forest",new Point (1,4),"Fred"),
+    Mountain("Mountain",new Point (1,5),"Fiona");
     
     private final String location;
     private final Point coordinates;

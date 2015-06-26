@@ -26,7 +26,7 @@ public enum Tributes implements Serializable{
     Fred("Female","District three","fighting skills",34,34,new Point (1,2)),
     Lila("Female","District four","fighting skills",34,34,new Point (1,2)),
     Lary("Female","District four","fighting skills", 34,34,new Point (1,2)),
-    Missy("Female","District five","fighting skills",  34,34,new Point (1,2)),
+    Missy("Female","District five","fighting skills", 34,34,new Point (1,2)),
     Matt("Female","District five","fighting skills", 4,34,new Point (1,2));
     
     private final String gender;

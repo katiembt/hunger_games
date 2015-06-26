@@ -14,25 +14,18 @@ import java.io.Serializable;
  */
 public enum Item implements Serializable{
   
-    itemOne("","apple"),
-    itemTwo("knife",""),
-    itemThree("knife","apple"),
-    itemFour("knife","apple");
+    itemOne("apple"),
+    itemTwo("berry"),
+    itemThree("lemon"),
+    itemFour("mushroom");
     
-    private final String weapon;
+    
     private final String food;
 
 
-
-
-    Item(String weapon, String food) {
-        this.weapon = weapon;
+    Item(String food) {
+        
         this.food = food;
-    }
-
-
-    public String getWeapon() {
-        return weapon;
     }
 
     public String getFood() {
