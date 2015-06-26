@@ -14,8 +14,8 @@ import java.io.Serializable;
  */
 public enum Item implements Serializable{
   
-    itemOne("knife","apple"),
-    itemTwo("knife","apple"),
+    itemOne("","apple"),
+    itemTwo("knife",""),
     itemThree("knife","apple"),
     itemFour("knife","apple");
     

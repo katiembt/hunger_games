@@ -38,7 +38,7 @@ public void display() {
             
             this.doAction(selection);
             
-        } while(selection != 'B' && selection !='b' && selection !='Q' && selection !='q');
+        } while(selection != 'R' && selection !='r' && selection !='Q' && selection !='q');
         
     }
         

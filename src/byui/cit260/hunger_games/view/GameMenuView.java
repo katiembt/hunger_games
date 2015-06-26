@@ -23,7 +23,7 @@ public class GameMenuView extends View {
         
         char selection = (char) obj;
         
-        switch(selection){   
+        switch(selection){    
             case 'R':
             case 'r':
                 return false;
@@ -38,7 +38,7 @@ public class GameMenuView extends View {
 
    
 
-    private void viewMainMenu() {
+   private void viewMainMenu() {
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
     }
