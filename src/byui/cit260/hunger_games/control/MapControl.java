@@ -5,15 +5,25 @@
  */
 package byui.cit260.hunger_games.control;
 
+import byui.cit260.hunger_games.model.Map;
+import byui.cit260.hunger_games.model.Scene;
 /**
  *
  * @author WINGU
  */
 public class MapControl {
-    Map map = new Map(20,20);
-    
-    Scene[] scenes = createScenes(); 
-    
-    assignScencesToLocation (map,scenes); 
+
+    static Map createMap() {
+        Map map = new Map(10, 10);
+        
+        assignScenesToLocations(map);
+        
+        return map;
+    }
+
+    static void moveTributesToStartingLocation(Map map) {   
+    }
+    private static void assignScenesToLocations(Map map) { 
+    }
     
 }

@@ -14,12 +14,55 @@ import java.util.Objects;
  */
 public class Location implements Serializable{
    
-     private String row;
-     private String column;
+     private int row;
+     private int column;
+     private Scene scene;
+     private Item item;
+    private Tributes tributes;
 
     public Location() {
     }
+    
+    public int getRow() {
+        return row;
+    }
 
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+    
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Tributes getTributes() {
+        return tributes;
+    }
+
+    public void setTributes (Tributes tributes) {
+        this.tributes = tributes;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+    
     @Override
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + '}';
@@ -53,20 +96,20 @@ public class Location implements Serializable{
      
      
 
-    public String getRow() {
-        return row;
-    }
-
-    public void setRow(String row) {
-        this.row = row;
-    }
-
-    public String getColumn() {
-        return column;
-    }
-
-    public void setColumn(String column) {
-        this.column = column;
-    }
+//    public String getRow() {
+//        return row;
+//    }
+//
+//    public void setRow(String row) {
+//        this.row = row;
+//    }
+//
+//    public String getColumn() {
+//        return column;
+//    }
+//
+//    public void setColumn(String column) {
+//        this.column = column;
+//    }
     
 }

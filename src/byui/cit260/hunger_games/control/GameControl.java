@@ -7,6 +7,8 @@ package byui.cit260.hunger_games.control;
 
 import byui.cit260.hunger_games.model.Game;
 import byui.cit260.hunger_games.model.Player;
+import byui.cit260.hunger_games.model.Map;
+import byui.cit260.hunger_games.model.Item;
 
 /**
  *
@@ -27,7 +29,8 @@ public class GameControl {
         Map map = MapControl.createMap();
         game.setMap(map);
         
-        MapControl.moveActorsToStartingLocation(map);
+        MapControl.moveTributesToStartingLocation(map);
+        
         
     }
     

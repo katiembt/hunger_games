@@ -18,16 +18,30 @@ import java.io.Serializable;
 
 public enum Tributes implements Serializable{
   
-    Kat("Female","District one","fighting skills",34,34,new Point (1,2)),
-    Ken("Male","District one","fighting skills",34,34,new Point (1,2)),
-    Alice("female","District two","fighting skills",34,34,new Point (1,2)),
-    Axel("Male","District two","fighting skills",34,34,new Point (1,2)),
-    Fiona("Female","District three","fighting skills",34,34,new Point (1,2)),
-    Fred("Female","District three","fighting skills",34,34,new Point (1,2)),
-    Lila("Female","District four","fighting skills",34,34,new Point (1,2)),
-    Lary("Female","District four","fighting skills", 34,34,new Point (1,2)),
-    Missy("Female","District five","fighting skills", 34,34,new Point (1,2)),
-    Matt("Female","District five","fighting skills", 4,34,new Point (1,2));
+    Kat("Female","District 01","fighting skills",34,34,new Point (1,2)),
+    Atticus("Male","District 01","fighting skills",34,34,new Point (1,2)),
+    Alice("female","District 02","fighting skills",34,34,new Point (1,2)),
+    Axel("Male","District 02","fighting skills",34,34,new Point (1,2)),
+    Artemis("Female","District 03","fighting skills",34,34,new Point (1,2)),
+    Jack("Male","District 03","fighting skills",34,34,new Point (1,2)),
+    Hana("Female","District 04","fighting skills",34,34,new Point (1,2)),
+    Mako("Male","District 04","fighting skills", 34,34,new Point (1,2)),
+    Sapphire("Female","District 05","fighting skills", 34,34,new Point (1,2)),
+    Sterling("Male","District 05","fighting skills", 4,34,new Point (1,2)),
+    Jade("Female","District 06","fighting skills", 34,34,new Point (1,2)),
+    Lance("Male","District 06","fighting skills", 4,34,new Point (1,2)),
+    Kaguya("Female","District 07","fighting skills",34,34,new Point (1,2)),
+    Drew("Male","District 07","fighting skills",34,34,new Point (1,2)),
+    Layla("female","District 08","fighting skills",34,34,new Point (1,2)),
+    Roy("Male","District 08","fighting skills",34,34,new Point (1,2)),
+    Melody("Female","District 09","fighting skills",34,34,new Point (1,2)),
+    Wallace("Male","District 09","fighting skills",34,34,new Point (1,2)),
+    Diantha("Female","District 10","fighting skills",34,34,new Point (1,2)),
+    Zane("Male","District 10","fighting skills", 34,34,new Point (1,2)),
+    Iris("Female","District 11","fighting skills", 34,34,new Point (1,2)),
+    Blake("Male","District 11","fighting skills", 4,34,new Point (1,2)),
+    Mavis("Female","District 12","fighting skills", 34,34,new Point (1,2)),
+    Bartholomew("Male","District 12","fighting skills", 4,34,new Point (1,2));
     
     private final String gender;
     private final String district;
@@ -70,7 +84,10 @@ public enum Tributes implements Serializable{
      public Point getCoordinates() {
         return coordinates;
     }
-
+     @Override
+    public String toString() {
+        return "Tributes{" + " district=" + district + ", skills=" + skills + ", strength=" + strength + ", gender=" + gender + ", healthPoints=" + healthPoints + ", coordinates=" + coordinates + '}';
+    }
 }
 
 
