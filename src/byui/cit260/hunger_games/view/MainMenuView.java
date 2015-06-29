@@ -21,7 +21,7 @@ public class MainMenuView extends View {
             +"\n----------------------------------------------"
             +"\nN - New Game"
             +"\nC - Continue Previous Game"
-            +"\nH - Need Help?"
+            +"\nH - Help"
             +"\nQ - Quit"
             +"\n----------------------------------------------");
     }
@@ -60,10 +60,11 @@ public class MainMenuView extends View {
         return true;
     }
     private void startNewGame() {
-        GameControl.createNewGame(Hunger_games_text.getPlayer());
-        
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
+        System.out.println("***newGame function called ***");
+//        GameControl.createNewGame(Hunger_games_text.getPlayer());
+//        
+//        GameMenuView gameMenu = new GameMenuView();
+//        gameMenu.display();
     }
 
 
