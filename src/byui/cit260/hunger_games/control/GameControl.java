@@ -23,15 +23,17 @@ public class GameControl {
         
         game.setPlayer(player);
         
-        InventyoryItem[] inventoryList = GameControl.createInventoryList();
-        game.setInventory(inventoryList);
+//        InventoryItem[] inventoryList = GameControl.createInventoryList();
+//        game.setInventory(inventoryList);
         
         Map map = MapControl.createMap();
         game.setMap(map);
         
-        MapControl.moveTributesToStartingLocation(map);
         
         
+    }
+    static void assignScene(Map map) {
+        System.out.println("\n ** stub function called ** ");
     }
     
 }

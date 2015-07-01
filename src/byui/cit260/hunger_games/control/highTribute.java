@@ -4,21 +4,25 @@
  * and open the template in the editor.
  */
 package byui.cit260.hunger_games.control;
+
 import byui.cit260.hunger_Games.Tributes;
 import static java.util.Collections.list;
 
 /**
  *
- * @author WINGU
+ * @author katherine blake
  */
-public class weakTributes {
+public class highTribute {
     
-    int min = list[0];
+    int max = list[0];
         for(int i=1;i < list.length;i++){
-            if(list[i] < min){
-                min = list[i];
+            if(list[i] > max){
+                max = list[i];
             }
         }
-    return min;    
+    return max;    
 }
     
+ 
+   
+

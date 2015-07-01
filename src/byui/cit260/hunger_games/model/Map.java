@@ -14,20 +14,38 @@ import java.io.Serializable;
 public class Map implements Serializable{
     private int row;   
     private int column;
+   
 
-    public Map() {
+    public Map(int row, int column) {
+    }     
+    
+    public int getRow() {
+        return row;
     }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    } 
+   
 
     @Override
     public String toString() {
-        return "Map{" + "row=" + row + ", column=" + column + '}';
+        return "Map{" + "row=" + row + ", column=" + column +  '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 41 * hash + this.row;
-        hash = 41 * hash + this.column;
+        int hash = 3;
+        hash = 79 * hash + this.row;
+        hash = 79 * hash + this.column;
         return hash;
     }
 
@@ -48,26 +66,6 @@ public class Map implements Serializable{
         }
         return true;
     }
-
-     
-    
-    public int getRow() {
-        return row;
-    }
-
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    public int getColumn() {
-        return column;
-    }
-
-    public void setColumn(int column) {
-        this.column = column;
-    }
-    
-    
-   
-    
 }
+
+
