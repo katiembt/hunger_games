@@ -23,7 +23,7 @@ public class GameControl {
         
         game.setPlayer(player);
         
-        InventyoryItem[] inventoryList = GameControl.createInventoryList();
+        InventoryItem[] inventoryList = GameControl.createInventoryList();
         game.setInventory(inventoryList);
         
         Map map = MapControl.createMap();
@@ -32,6 +32,9 @@ public class GameControl {
         MapControl.moveTributesToStartingLocation(map);
         
         
+    }
+    static void assignScene(Map map) {
+        System.out.println("\n ** stub function called ** ");
     }
     
 }
