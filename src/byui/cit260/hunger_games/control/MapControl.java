@@ -32,7 +32,7 @@ public class MapControl {
 
 
     private static void assignScene(Map map, Scene[] scenes) {
-        Location[][] locations = map.getLocations();
+//        Location[][] locations = map.getLocations();
         
        
     }

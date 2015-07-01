@@ -23,13 +23,12 @@ public class GameControl {
         
         game.setPlayer(player);
         
-        InventoryItem[] inventoryList = GameControl.createInventoryList();
-        game.setInventory(inventoryList);
+//        InventoryItem[] inventoryList = GameControl.createInventoryList();
+//        game.setInventory(inventoryList);
         
         Map map = MapControl.createMap();
         game.setMap(map);
         
-        MapControl.moveTributesToStartingLocation(map);
         
         
     }
