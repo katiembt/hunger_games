@@ -5,10 +5,12 @@
  */
 package byui.cit260.hunger_games.control;
 
+import hunger_games_text.Hunger_games_text;
 import byui.cit260.hunger_games.model.Game;
 import byui.cit260.hunger_games.model.Player;
 import byui.cit260.hunger_games.model.Map;
 import byui.cit260.hunger_games.model.Item;
+import byui.cit260.hunger_games.control.MapControl;
 
 /**
  *

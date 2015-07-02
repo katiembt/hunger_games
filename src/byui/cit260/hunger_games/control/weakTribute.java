@@ -11,7 +11,7 @@ import static java.util.Collections.list;
  *
  * @author WINGU
  */
-public class weakTributes {
+public class weakTribute {
     
     public Tributes int min = list[0];
         for(int i=1;i < list.length;i++){
