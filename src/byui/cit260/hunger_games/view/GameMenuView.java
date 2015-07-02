@@ -13,6 +13,7 @@ public class GameMenuView extends View {
     
         public GameMenuView() {
             super("\n"
+            +"\nM- Move-------------------------------------"         
             +"\nR- Return-------------------------------------"        
             +"\n----------------------------------------------");
             
@@ -23,7 +24,11 @@ public class GameMenuView extends View {
         
         char selection = (char) obj;
         
-        switch(selection){    
+        switch(selection){  
+            case 'M':
+            case 'm':
+                this.viewMoveView();
+                break;    
             case 'R':
             case 'r':
                 return false;
@@ -34,7 +39,10 @@ public class GameMenuView extends View {
         return true;
     }
     
- 
+  private void viewMoveView() {
+        MoveView moveView = new MoveView();
+        moveView.display();
+    }
 
    
 

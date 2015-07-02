@@ -53,7 +53,7 @@ public class MapControlView extends View {
         System.out.println("\n\n********************************************"
                             +"\n|            Map                           |"
                             +"\n********************************************"
-                            +"\n*  Map                          *"
+                            +"\n*             Map                          *"
                             +"\n********************************************");
                    
     }
@@ -68,9 +68,9 @@ public class MapControlView extends View {
 
    
 
-    private void viewMainMenu() {
-        MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.display();
+    private void viewGameMenu() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.display();
     }
     
 }

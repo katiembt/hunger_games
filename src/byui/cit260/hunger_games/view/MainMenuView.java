@@ -39,7 +39,7 @@ public class MainMenuView extends View {
         switch(selection){
             case 'N':
             case 'n':
-                this.startNewGame();
+                this.viewGameMenu();
                 break;
             case 'C':
             case 'c':
@@ -59,12 +59,14 @@ public class MainMenuView extends View {
         
         return true;
     }
-    private void startNewGame() {
-        System.out.println("***newGame function called ***");
+//    private void startNewGame() {
+//        System.out.println("***newGame function called ***");
 //        GameControl.createNewGame(Hunger_games_text.getPlayer());
 //        
-//        GameMenuView gameMenu = new GameMenuView();
-//        gameMenu.display();
+//          gameMenuView.display();
+        private void viewGameMenu() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.display();
     }
 
 
