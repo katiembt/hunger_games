@@ -30,7 +30,7 @@ public class GameControl {
         game.setMap(map);
         
         
-        
+        mapControl.moveTributeToStartingLocation(map);
     }
     static void assignScene(Map map) {
         System.out.println("\n ** stub function called ** ");
