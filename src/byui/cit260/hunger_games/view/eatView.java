@@ -53,9 +53,9 @@ public class eatView extends View {
 
    
 
-    private void viewMainMenu() {
-        MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.display();
+    private void viewGameMenu() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gamenMenuView.display();
     }
     
 }
