@@ -6,13 +6,13 @@
 package hunger_games_text;
 
 import byui.cit260.hunger_games.model.Game;
-import byui.cit260.hunger_games.model.Inventory;
-import byui.cit260.hunger_games.model.Item;
-import byui.cit260.hunger_games.model.Location;
-import byui.cit260.hunger_games.model.Map;
+//import byui.cit260.hunger_games.model.Inventory;
+//import byui.cit260.hunger_games.model.Item;
+//import byui.cit260.hunger_games.model.Location;
+//import byui.cit260.hunger_games.model.Map;
 import byui.cit260.hunger_games.model.Player;
-import byui.cit260.hunger_games.model.Scene;
-import byui.cit260.hunger_games.model.Tributes;
+//import byui.cit260.hunger_games.model.Scene;
+//import byui.cit260.hunger_games.model.Tributes;
 import byui.cit260.hunger_games.view.StartProgramView;
 
 
