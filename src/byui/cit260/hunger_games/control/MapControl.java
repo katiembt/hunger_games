@@ -9,7 +9,6 @@ package byui.cit260.hunger_games.control;
 import byui.cit260.hunger_games.model.Location;
 import byui.cit260.hunger_games.model.Map;
 import byui.cit260.hunger_games.model.Scene;
-import exceptions.mapControlException;
 
 
 /**
@@ -29,18 +28,6 @@ public class MapControl {
 
     static void moveTributeStart(Map map) {
         System.out.println("\n***called ***");
-        throws mapControlException {
-        
-        Map map = hunger_games.getCurrentGame().getMap();
-        int newRow = coordinates.x-1;
-        int newRow = coordinates.y-1;
-        
-        if(newRow < 0 ||newRow>= map.getNoRows()||
-            newColumn < 0 ||newColumn>= map.getNoColumns() ){
-        
-            Throw new mapControlexception(Can not move tribute to location)
-        
-    }
     }
 
 
