@@ -6,7 +6,7 @@
 package byui.cit260.hunger_games.control;
 
 import byui.cit260.hunger_games.model.Player;
-import hunger_games_text.Hunger_games_text;
+import the_hunger_games.Hunger_Games;
 
 /**
  *
@@ -23,7 +23,7 @@ public class ProgramControl {
         Player player = new Player();
         player.setName(name);
         
-        Hunger_games_text.setPlayer(player);
+        Hunger_Games.setPlayer(player);
         
         return player;
     }

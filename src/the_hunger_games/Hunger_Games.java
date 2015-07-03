@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hunger_games_text;
+package the_hunger_games;
 
 import byui.cit260.hunger_games.model.Game;
-//import byui.cit260.hunger_games.model.Inventory;
-//import byui.cit260.hunger_games.model.Item;
-//import byui.cit260.hunger_games.model.Location;
-//import byui.cit260.hunger_games.model.Map;
+import byui.cit260.hunger_games.model.Inventory;
+import byui.cit260.hunger_games.model.Item;
+import byui.cit260.hunger_games.model.Location;
+import byui.cit260.hunger_games.model.Map;
 import byui.cit260.hunger_games.model.Player;
-//import byui.cit260.hunger_games.model.Scene;
-//import byui.cit260.hunger_games.model.Tributes;
+import byui.cit260.hunger_games.model.Scene;
+import byui.cit260.hunger_games.model.Tributes;
 import byui.cit260.hunger_games.view.StartProgramView;
 
 
@@ -22,27 +22,33 @@ import byui.cit260.hunger_games.view.StartProgramView;
  * @author katherineblake
  * 
  */
-public class Hunger_games_text {
+public class Hunger_Games{
     
     private static Game currentGame = null;
     private static Player player = null;
 
-    public static void main(String[] args){
-        // startProgramView I guess
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.startProgram();
-    //Player
-       Player created = new Player();
-       created.setName("?");
-       created.setGender("?");
-       created.setDistrict("District #");
-       created.setSkills("picked up");
-       created.setHealthPoints(100);
-       created.setStrength(25);
-       
-       String PlayerCreated  = created.toString();
-       System.out.println(created);
+     public static void main(String[] args) {
         
+        StartProgramView startProgramView = new StartProgramView();
+        try {
+          startProgramView.startProgram();   
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
+    //Player
+//       Player created = new Player();
+//       created.setName("?");
+//       created.setGender("?");
+//       created.setDistrict("District #");
+//       created.setSkills("picked up");
+//       created.setHealthPoints(100);
+//       created.setStrength(25);
+//       
+//       String PlayerCreated  = created.toString();
+//       System.out.println(created);
+//        
         //Tribute one Male
 //    Tributes oneM = new Tributes();
 //        oneM.setName("Jett");
@@ -174,7 +180,7 @@ public class Hunger_games_text {
     }
     
     public static void setCurrentGame(Game currentGame){
-        Hunger_games_text.currentGame = currentGame;
+        Hunger_Games.currentGame = currentGame;
     }
     
     public static Player getPlayer(){
@@ -182,6 +188,6 @@ public class Hunger_games_text {
     }
     
     public static void setPlayer(Player player){
-        Hunger_games_text.player = player;
+        Hunger_Games.player = player;
     }
 }

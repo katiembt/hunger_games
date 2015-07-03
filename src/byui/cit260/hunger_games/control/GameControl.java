@@ -5,7 +5,7 @@
  */
 package byui.cit260.hunger_games.control;
 
-import hunger_games_text.Hunger_games_text;
+import the_hunger_games.Hunger_Games;
 import byui.cit260.hunger_games.model.Game;
 import byui.cit260.hunger_games.model.Player;
 import byui.cit260.hunger_games.model.Map;
@@ -21,7 +21,7 @@ public class GameControl {
     public static void createNewGame(Player player) {
         
         Game game = new Game();
-        hunger_games_text.setCurrentGame(game);
+        Hunger_Games.setCurrentGame(game);
         
         game.setPlayer(player);
         
@@ -32,7 +32,7 @@ public class GameControl {
         game.setMap(map);
         
         
-        mapControl.moveTributeToStartingLocation(map);
+//        MapControl.moveTributesToStartingLocation(map);
     }
     static void assignScene(Map map) {
         System.out.println("\n ** stub function called ** ");

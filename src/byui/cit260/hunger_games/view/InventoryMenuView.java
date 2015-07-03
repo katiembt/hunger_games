@@ -6,7 +6,7 @@
 package byui.cit260.hunger_games.view;
 
 import byui.cit260.hunger_games.control.InventoryControl;
-import hunger_games_text.Hunger_games_text;
+import the_hunger_games.Hunger_Games;
 import java.util.Scanner;
 
 /**
