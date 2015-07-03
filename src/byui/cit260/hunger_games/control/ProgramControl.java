@@ -6,6 +6,7 @@
 package byui.cit260.hunger_games.control;
 
 import byui.cit260.hunger_games.model.Player;
+import exceptions.programControlException;
 import the_hunger_games.Hunger_Games;
 
 /**
@@ -17,7 +18,9 @@ public class ProgramControl {
     public static Player createPlayer(String name) {
         System.out.println("\n**** createPlayer function called ****");
         if  (name==null) {
-        return null;
+//            throw new programControlException("Player's name needs to be atleast."
+//                                            +" two characters in length.");
+//        }
         }
         
         Player player = new Player();
