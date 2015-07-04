@@ -5,6 +5,8 @@
  */
 package byui.cit260.hunger_games.view;
 
+import exceptions.HarvestControlException;
+
 /**
  *
  * @author katherineblake
@@ -15,13 +17,14 @@ public class HarvestView extends View{
         super(promptMessage);
     }
 
-    HarvestView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     @Override
     public boolean doAction(Object obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         try{
+             calcHarvControl(double height, double distance);
+         }
+         catch (HarvestControlException){
+         }
+         return HarvestControlException;
     }
     
 }
