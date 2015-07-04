@@ -42,6 +42,14 @@ public class BattleControl {
         double hit = player_number;
                 return hit;
     } 
+    
+        private void BattleControlexception(String can_not_move_tribute_to_location) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void BattleControlException(String invalid) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
        
 
