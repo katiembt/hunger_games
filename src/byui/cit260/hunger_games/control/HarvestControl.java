@@ -5,13 +5,15 @@
  */
 package byui.cit260.hunger_games.control;
 
+import exceptions.HarvestControlException;
+
 /**
  *
  * @author WINGU
  */
 public class HarvestControl {
     
-    public double calcHarvControl (double height, double distance) {
+    public double calcHarvControl (double height, double distance) throws HarvestControlException {
         
        if ((height < 1) || (height > 20)) {
            return -1;
@@ -23,6 +25,6 @@ public class HarvestControl {
        
                 double diagonal = Math.sqrt((height * height) + (distance * distance)) ;
                 return diagonal;
-
+                throws new HarvestControlException("invalid");
     }
 }

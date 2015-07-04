@@ -4,9 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/model/Map.java</file>
-            <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/hunger_games_text/Hunger_games_text.java</file>
+            <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/exceptions/mapControlException.java</file>
+            <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/exceptions/programControlException.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/control/MapControl.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/control/GameControl.java</file>
+            <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/the_hunger_games/Hunger_Games.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/control/ProgramControl.java</file>
             <file>file:/Users/katherineblake/Desktop/School_Work/CIT_260/text_adventure/hunger_games/hunger_games/src/byui/cit260/hunger_games/model/Player.java</file>
         </group>

@@ -32,7 +32,7 @@ public class harvestMenuView extends View {
         switch(selection){
             case 'H':
             case 'h':
-                this.viewHarvest();
+                this.viewHarvestView();
                 break;   
             case 'R':
             case 'r':
@@ -44,13 +44,9 @@ public class harvestMenuView extends View {
         return true;
     }
     
-    private void viewHarvest() {
-        System.out.println("\n\n********************************************"
-                            +"\n|            Map                           |"
-                            +"\n********************************************"
-                            +"\n* Answer the question correctly to open the *"
-                            +"\n*  Aid package.                             *"
-                            +"\n********************************************");
+     private void viewHarvestView() {
+        HarvestView harvestView = new HarvestView();
+        harvestView.display();
                    
     }
 
