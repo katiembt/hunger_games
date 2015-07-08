@@ -41,21 +41,24 @@ public class StartProgramView {
        System.out.println("\n\n*************************************************");
        
        System.out.println("*                                                                                                                           *"
-                         + "\n* Welcome to the Hunger games.                    *");
+                         + "\n* HUNGER GAMES | GENERATIONS                *");
        System.out.println("*                                                                                                                           *" 
-                        + "\n* This is a game of survival. In this              *"
-                        + "\n* game you are a tribute from                      *"
-                        + "\n* District 12. You have just entered               *"
-                        + " \n* the battle arena. All is calm, until            *"
-                        + "\n* Until the cannon goes off. The                   *"
-                        + "\n* games have begun. The only                       *"
-                        + "\n* way out Is a battle to the death.                *"
-                        + "\n* You must kill all other tributes                 *"
-                        + " \n* from all other districts in order               *"
-                        + "\n* to get out. If you fail you will die             *");
+                        + "\n* This game takes place 30 years after          *"
+                        + "\n* the second rebellion. After many                 *"
+                        + "\n* years without it, the President,                     *"
+                        + "\n* Katniss Everdeen, has finally reinstated      *"
+                        + "\n* the Hunger Games, but this time,  it is        *"
+                        + "\n* civilized. It's now Trivia Game Show.           *"
+                        + "\n* Each distict now has to select an                 *"
+                        + "\n* individual to represent their distrct to        *"
+                        + "\n* compete in a hard and intricate Q&A         *"
+                        + "\n* game. Although more civilized, it is           *"
+                        + "\n* still inhumane. If you fail to answer a         *"
+                        + "\n* question correctly, you will be killed          *"
+                        + "\n*  off (off scene, of course).                           *" );
        System.out.println("                                                     *                                                                                                                           *" 
-                        + "\n* Good luck and may the odds                       *"
-                        + "\n* be ever in your favor.                           *");
+                        + "\n* Good luck and may the odds be ever         *"
+                        + "\n*  in your favor. (*Mockingjay whistle)          *");
        System.out.println("*****************************************************");
     }
 
@@ -83,7 +86,7 @@ public class StartProgramView {
 
     private void displayWelcomeMessage(Player player) {
         System.out.println("\n\n=============================================");
-        System.out.println("\tWelcome to to the Hunger Games" + " " + player.getName());
+        System.out.println("\tWelcome to to the Hunger Games | Generations: Game Show" + " " + player.getName());
         System.out.println("\tMay the odds ever be in your favor.");
         System.out.println("=================================================");
     }
