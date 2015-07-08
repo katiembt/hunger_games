@@ -27,6 +27,17 @@ public class MainTriviaHungerGames {
 
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        MainTriviaHungerGames.logFile = logFile;
+    }
+    
 
     public static PrintWriter getOutFile() {
         return outFile;
@@ -54,7 +65,10 @@ public class MainTriviaHungerGames {
                     new BufferedReader(new InputStreamReader(System.in));
             
             MainTriviaHungerGames.outFile = 
-                    new PrintWriter(System.out, true);            
+                    new PrintWriter(System.out, true);   
+            
+            String filePath ="log.txt";
+            MainTriviaHungerGames.logFile = new PrintWriter(filePath);
         
            StartProgramView startProgramView = new StartProgramView();
             startProgramView.startProgram();   
@@ -71,6 +85,10 @@ public class MainTriviaHungerGames {
                 
                 if(MainTriviaHungerGames.outFile !=null)
                    MainTriviaHungerGames.outFile.close();
+                
+                if(MainTriviaHungerGames.logFile !=null)
+                   MainTriviaHungerGames.logFile.close();
+                
             } catch (IOException ex) {
                System.out.println("error closing files");
                return;
