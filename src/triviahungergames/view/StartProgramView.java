@@ -38,28 +38,25 @@ public class StartProgramView {
   
 
     private void displayBanner() {
-       System.out.println("\n\n*************************************************");
+       System.out.println("\n\n******************************************************");
        
        System.out.println("*                                                                                                                           *"
-                         + "\n* HUNGER GAMES | GENERATIONS                *");
+                         + "\n* HUNGER GAMES                                       *");
        System.out.println("*                                                                                                                           *" 
-                        + "\n* This game takes place 30 years after          *"
-                        + "\n* the second rebellion. After many                 *"
-                        + "\n* years without it, the President,                     *"
-                        + "\n* Katniss Everdeen, has finally reinstated      *"
-                        + "\n* the Hunger Games, but this time,  it is        *"
-                        + "\n* civilized. It's now Trivia Game Show.           *"
-                        + "\n* Each distict now has to select an                 *"
-                        + "\n* individual to represent their distrct to        *"
-                        + "\n* compete in a hard and intricate Q&A         *"
-                        + "\n* game. Although more civilized, it is           *"
-                        + "\n* still inhumane. If you fail to answer a         *"
-                        + "\n* question correctly, you will be killed          *"
-                        + "\n*  off (off scene, of course).                           *" );
-       System.out.println("                                                     *                                                                                                                           *" 
-                        + "\n* Good luck and may the odds be ever         *"
-                        + "\n*  in your favor. (*Mockingjay whistle)          *");
-       System.out.println("*****************************************************");
+                        + "\n* Welcome to the Hunger Games!                          *"
+                        + "\n* You have been chosen as one of the tributes from       " 
+                        + "\n* district 12. You will enter an arena and the only      " 
+                        + "\n* way to leave the arena is to kill all other tributes.  " 
+                        + "\n* In order to kill a tribute you must answer a question   " 
+                        + "\n* relating to the Hunger Games correctly. If you answer   " 
+                        + "\n* correctly you move on to the next tribute. If you answer" 
+                        + "\n* incorrectly you die.                                    " );
+       
+       
+       System.out.println("                                                            *                                                                                                                           *" 
+                        + "\n* Good luck and may the odds be ever                      *"
+                        + "\n*  in your favor. (*Mockingjay whistle)                  *");
+       System.out.println("************************************************************");
     }
 
     private String getPlayersName() {

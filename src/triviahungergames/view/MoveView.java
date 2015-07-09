@@ -52,7 +52,7 @@ public class MoveView extends View {
                             +"\n|            Map                           |"
                             +"\n********************************************"
                             +"\n* Answer the question correctly to open the *"
-                            +"\n*  Aid package.                             *"
+                            +"\n*                                           *"
                             +"\n********************************************");
                    
     }
@@ -60,7 +60,7 @@ public class MoveView extends View {
         System.out.println("\n\n********************************************"
                             +"\n|            Move                          |"
                             +"\n********************************************"
-                            +"\n* Where do you wantt to move?                *"
+                            +"\n* Where do you wantt to move?               *"
                             +"\n*                                          *"
                             +"\n********************************************");
                    

@@ -15,13 +15,13 @@ public class HelpMenuView extends View {
         public HelpMenuView() {
             super("\n"
             +"\n---------------------------------------------"
-            +"\n|                               Help Menu                               |"
+            +"\n|                               Help Menu   |"
             +"\n---------------------------------------------"
-            +"\nO - Objective"
-            +"\nM - Move Help"
-            +"\nQ - Question Help"        
-            +"\nR - Return"
-            +"\n                                                                               "
+            +"\nO - Objective                                "
+            +"\nM - Move Help                                "
+            +"\nQ - Question Help                            "        
+            +"\nR - Return                                   "
+            +"\n                                             "
             +"\n---------------------------------------------");
             
         }
@@ -57,29 +57,29 @@ public class HelpMenuView extends View {
     
     private void viewObjectivesHelp() {
         System.out.println
-                             ("\n\n***************************************"
-                            +"\n|                    The Objective                    |"
-                            +"\n*****************************************"
-                            +"\n* The objective of the game is to survive *"
-                            +"\n*                                                          *"
-                            +"\n* You do so by answering questions        *"
-                            +"\n* correctly, and every question correctly, *"
+                             ("\n\n******************************************"
+                            +"\n|                    The Objective          |"
+                            +"\n*********************************************"
+                            +"\n* The objective of the game is to survive   *"
+                            +"\n*                                           *"
+                            +"\n* You do so by answering questions          *"
+                            +"\n* correctly, and every question correctly,  *"
                             +"\n* or else you die losing to another tribute.*"
-                            +"\n*                                                          *"
-                            +"\n*****************************************");
+                            +"\n*                                           *"
+                            +"\n*********************************************");
                    
     }
 
     private void viewMoveHelp() {
         System.out.println
                              ("\n\n***************************************"
-                            +"\n|                      Move Help                      |"
+                            +"\n|                      Move Help         |"
                             +"\n*****************************************"
-                            +"\n* To move in this game you will need to   *"
-                            +"\n* defeat a competing tribute, you will      *"
-                            +"\n* automatically be transfere to the next   *"
-                            +"\n* location on the map.                            *"
-                            +"\n*                                                          *"         
+                            +"\n* To move in this game you will need to  *"
+                            +"\n* defeat a competing tribute, you will   *"
+                            +"\n* automatically be transfere to the next *"
+                            +"\n* location on the map.                   *"
+                            +"\n*                                        *"         
                             +"\n*****************************************");
     
     }
@@ -87,12 +87,12 @@ public class HelpMenuView extends View {
      private void viewQuestionHelp() {
         System.out.println
                              ("\n\n***************************************"
-                            +"\n|                   Question Help                    |"
+                            +"\n|                   Question Help        |"
                             +"\n*****************************************"
-                            +"\n* We can't give you the answers, try         *"
+                            +"\n* We can't give you the answers, try     *"
                             +"\n* Googling it or something, if don't know, *"
-                            +"\n* but you should already know these.      *"
-                            +"\n*                                                          *"         
+                            +"\n* but you should already know these.     *"
+                            +"\n*                                        *"         
                             +"\n*****************************************");
     }
 
