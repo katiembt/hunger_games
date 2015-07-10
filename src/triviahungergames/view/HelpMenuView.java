@@ -5,12 +5,16 @@
  */
 package triviahungergames.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 /**
  *
  * @author katherineblake
  */
 public class HelpMenuView extends View {
+    protected final BufferedReader keyboard = MainTriviaHungerGames.getInFile();
+    protected final PrintWriter keyboard = MainTriviaHungerGames.getOutFile();
     
         public HelpMenuView() {
             super("\n"
@@ -56,7 +60,7 @@ public class HelpMenuView extends View {
     }
     
     private void viewObjectivesHelp() {
-        System.out.println
+        this.console.println
                              ("\n\n******************************************"
                             +"\n|                    The Objective          |"
                             +"\n*********************************************"
@@ -71,7 +75,7 @@ public class HelpMenuView extends View {
     }
 
     private void viewMoveHelp() {
-        System.out.println
+        this.console.println
                              ("\n\n***************************************"
                             +"\n|                      Move Help         |"
                             +"\n*****************************************"
@@ -85,7 +89,7 @@ public class HelpMenuView extends View {
     }
     
      private void viewQuestionHelp() {
-        System.out.println
+        this.console.println
                              ("\n\n***************************************"
                             +"\n|                   Question Help        |"
                             +"\n*****************************************"

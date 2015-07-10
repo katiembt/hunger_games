@@ -22,7 +22,7 @@ public class HarvestControlTest {
      */
     @Test
     public void testCalcHarvControl() {
-        System.out.println("calcHarvControl");
+        this.console.println("calcHarvControl");
         double height = 1.0;
         double distance = -51.0;
         HarvestControl instance = new HarvestControl();

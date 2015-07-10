@@ -34,7 +34,7 @@ public class GameControl {
 //        MapControl.moveTributesToStartingLocation(map);
     }
     static void assignScene(Map map) {
-        System.out.println("\n ** stub function called ** ");
+        this.console.println("\n ** stub function called ** ");
     }
     
 }

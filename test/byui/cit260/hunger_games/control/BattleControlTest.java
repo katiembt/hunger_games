@@ -22,7 +22,7 @@ public class BattleControlTest {
      */
     @Test
     public void testBattle_p() {
-        System.out.println("battle_p");
+        this.console.println("battle_p");
         double player_number = 0;
         double expResult = 6;
         double result = BattleControl.battle_p(player_number);
@@ -35,7 +35,7 @@ public class BattleControlTest {
      */
     @Test
     public void testBattle_t() {
-        System.out.println("battle_t");
+        this.console.println("battle_t");
         double tribute_number = 0.0;
         double expResult = 6.0;
         double result = BattleControl.battle_t(tribute_number);
@@ -48,7 +48,7 @@ public class BattleControlTest {
      */
     @Test
     public void testCalcBattleControl() {
-        System.out.println("calcBattleControl");
+        this.console.println("calcBattleControl");
         double player_number = 6.0;
         double tribute_number = 7.0;
         BattleControl instance = new BattleControl();

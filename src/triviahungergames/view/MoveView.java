@@ -48,7 +48,7 @@ public class MoveView extends View {
     }
     
     private void viewSelectMap() {
-        System.out.println("\n\n********************************************"
+        this.console.println("\n\n********************************************"
                             +"\n|            Map                           |"
                             +"\n********************************************"
                             +"\n* Answer the question correctly to open the *"
@@ -57,7 +57,7 @@ public class MoveView extends View {
                    
     }
       private void viewMove() {
-        System.out.println("\n\n********************************************"
+        this.console.println("\n\n********************************************"
                             +"\n|            Move                          |"
                             +"\n********************************************"
                             +"\n* Where do you wantt to move?               *"

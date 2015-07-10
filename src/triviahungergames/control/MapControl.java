@@ -31,7 +31,7 @@ public class MapControl {
     }
     
 //    public static void moveTributesToStartingLocation(Tributes tributes, Point coordinates) {
-//        System.out.println("\n***called ***");
+//        this.console.println("\n***called ***");
 ////            throws mapControlException{
 //        
 //         Map map = MainTriviaHungerGames.getCurrentGame().getMap();

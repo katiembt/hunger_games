@@ -23,7 +23,7 @@ public class AidControlTest {
      */
     @Test
     public void testCalcAidControl() {
-        System.out.println("calcAidControl");
+        this.console.println("calcAidControl");
         double radius = 20.0;
         AidControl instance = new AidControl();
         double expResult = 33510.32;

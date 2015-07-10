@@ -22,7 +22,7 @@ public class StartProgramViewTest {
      */
     @Test
     public void testStartProgram() {
-        System.out.println("startProgram");
+        this.console.println("startProgram");
         StartProgramView instance = new StartProgramView();
         instance.startProgram();
         // TODO review the generated test code and remove the default call to fail.

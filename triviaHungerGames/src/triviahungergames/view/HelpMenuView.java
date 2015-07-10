@@ -69,7 +69,7 @@ public class HelpMenuView extends View {
     }
     
     private void viewObjectivesHelp() {
-        System.out.println("\n\n********************************************"
+        this.console.println("\n\n********************************************"
                             +"\n|            The Objective                 |"
                             +"\n********************************************"
                             +"\n* The objective of the game is to survive. *"
@@ -83,7 +83,7 @@ public class HelpMenuView extends View {
     }
 
     private void viewMoveHelp() {
-        System.out.println("\n\n*********************************************"
+        this.console.println("\n\n*********************************************"
                             +"\n************** Move Help*** *****************"
                             +"\n* To move in this game you will nee to find *"
                             +"\n* your current location. To do so select    *"
@@ -96,7 +96,7 @@ public class HelpMenuView extends View {
     }
 
     private void viewAidHelp() {
-        System.out.println("\n\n********************************************"
+        this.console.println("\n\n********************************************"
                             +"\n************* Aid Help *********************"
                             +"\n* To open an aid package you must input    *"
                             +"\n* the correct information. If the info  is *"
@@ -105,18 +105,18 @@ public class HelpMenuView extends View {
     }
 
     private void viewInventoryHelp() {
-        System.out.println("\n\n********************************************"
+        this.console.println("\n\n********************************************"
                             +"\n*************** Inventory ******************"
                             +"\n********************************************");
     }
     
      private void viewBattleHelp() {
-        System.out.println("\n\n********************************************"
+        this.console.println("\n\n********************************************"
                             +"\n*************** BATTLE    ******************"
                             +"\n********************************************");
     }
      private void viewFoodHelp() {
-        System.out.println("\n\n********************************************"
+        this.console.println("\n\n********************************************"
                             +"\n*************** Food Help ******************"
                             +"\n********************************************");
     }

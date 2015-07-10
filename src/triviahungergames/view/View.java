@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package triviahungergames.view;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import triviahungergames.MainTriviaHungerGames;
 
 /**
  *
@@ -13,6 +16,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
     
     private String promptMessage;
+    
+    protected  final static BufferedReader keyboard = MainTriviaHungerGames.getInFile();
+    protected final static PrintWriter keyboard = MainTriviaHungerGames.getOutFile();
     
     public View(String promptMessage) {
         this.promptMessage= promptMessage;
@@ -31,7 +37,7 @@ public void display() {
         
         char selection = ' ';
         do {
-            System.out.println(promptMessage);
+            this.console.println(promptMessage);
             
             String input = this.getInput();
             selection = input.charAt(0);
@@ -45,14 +51,14 @@ public void display() {
     @Override
     public String getInput() {
         boolean valid = false;
-        Scanner keyboard=new Scanner(System.in);
+//        Scanner keyboard=new Scanner(System.in);
         String menuItem ="";
         
         while(!valid) {
             
-            System.out.println("Please make a selection.");
+            this.console.println("Please make a selection.");
 
-            menuItem = keyboard.nextLine();
+            menuItem = this.keyboard.readLine();
             menuItem = menuItem.trim();
             
             if(menuItem.length()< 1) {

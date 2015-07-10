@@ -9,12 +9,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import triviahungergames.model.Game;
-import triviahungergames.model.Location;
-import triviahungergames.model.Map;
 import triviahungergames.model.Player;
+import triviahungergames.view.ErrorView;
 import triviahungergames.view.StartProgramView;
 
 /**
@@ -25,8 +22,8 @@ public class MainTriviaHungerGames {
     private static Game currentGame = null;
     private static Player player = null;
 
-    private static PrintWriter outFile = null;
-    private static BufferedReader inFile = null;
+    protected  static PrintWriter outFile = null;
+    protected  static BufferedReader inFile = null;
     
     private static PrintWriter logFile = null;
 
@@ -43,21 +40,15 @@ public class MainTriviaHungerGames {
         return outFile;
     }
 
-    public static void setOutFile(PrintWriter outFile) {
-        MainTriviaHungerGames.outFile = outFile;
-    }
 
     public static BufferedReader getInFile() {
         return inFile;
     }
 
-    public static void setInFile(BufferedReader inFile) {
-        MainTriviaHungerGames.inFile = inFile;
-    }
     
-     public static void main(String[] args) {
+    public void main(String[] args) {
         
-//        StartProgramView startProgramView = new StartProgramView();
+        StartProgramView startProgramView = new StartProgramView();
         try {
             
             //open character stream files for end user input and output
@@ -65,16 +56,16 @@ public class MainTriviaHungerGames {
                     new BufferedReader(new InputStreamReader(System.in));
             
             MainTriviaHungerGames.outFile = 
-                    new PrintWriter(System.out, true);   
-            
+                    new PrintWriter(System.out);   
+                    
             String filePath ="log.txt";
             MainTriviaHungerGames.logFile = new PrintWriter(filePath);
         
-           StartProgramView startProgramView = new StartProgramView();
+           
             startProgramView.startProgram();   
         } catch (Throwable te) {
             
-            System.out.println(te.getMessage());
+            ErrorView.display("MainTriviaHungerGames", te.getMessage());
             te.printStackTrace();
             startProgramView.display();
         }
@@ -95,7 +86,8 @@ public class MainTriviaHungerGames {
             }
             
         }
-        public static Game getCurrentGame(){
+    }
+    public static Game getCurrentGame(){
         return currentGame;
     }
     

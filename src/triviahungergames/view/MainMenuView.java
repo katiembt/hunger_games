@@ -60,7 +60,7 @@ public class MainMenuView extends View {
         return true;
     }
 //    private void startNewGame() {
-//        System.out.println("***newGame function called ***");
+//        this.console.println("***newGame function called ***");
 //        GameControl.createNewGame(Hunger_games_text.getPlayer());
 //        
 //          gameMenuView.display();
@@ -71,7 +71,7 @@ public class MainMenuView extends View {
 
 
     private void continueExistingGame() {
-        System.out.println("*** continueExistingGame function called ***");
+        this.console.println("*** continueExistingGame function called ***");
     }
 
     private void displayHelpMenu() {

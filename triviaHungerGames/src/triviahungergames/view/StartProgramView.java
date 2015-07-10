@@ -38,11 +38,11 @@ public class StartProgramView {
   
 
     private void displayBanner() {
-       System.out.println("\n\n*************************************************");
+       this.console.println("\n\n*************************************************");
        
-       System.out.println("*                                                                                                                           *"
+       this.console.println("*                                                                                                                           *"
                          + "\n* Welcome to the Hunger games.                    *");
-       System.out.println("*                                                                                                                           *" 
+       this.console.println("*                                                                                                                           *" 
                         + "\n* This is a game of survival. In this              *"
                         + "\n* game you are a tribute from                      *"
                         + "\n* District 12. You have just entered               *"
@@ -53,22 +53,22 @@ public class StartProgramView {
                         + "\n* You must kill all other tributes                 *"
                         + " \n* from all other districts in order               *"
                         + "\n* to get out. If you fail you will die             *");
-       System.out.println("                                                     *                                                                                                                           *" 
+       this.console.println("                                                     *                                                                                                                           *" 
                         + "\n* Good luck and may the odds                       *"
                         + "\n* be ever in your favor.                           *");
-       System.out.println("*****************************************************");
+       this.console.println("*****************************************************");
     }
 
     private String getPlayersName() {
         boolean valid = false; 
         String playersName = null;
-        Scanner keyboard = new Scanner(System.in);
+//        Scanner keyboard = new Scanner(System.in);
         
         while(!valid){
             
-            System.out.println("Enter the player's name below.");
+            this.console.println("Enter the player's name below.");
             
-            playersName = keyboard.nextLine();
+            playersName = this.keyboard.readLine();
             playersName =playersName.trim();
             
             if(playersName.length() < 2){
@@ -82,10 +82,10 @@ public class StartProgramView {
     }
 
     private void displayWelcomeMessage(Player player) {
-        System.out.println("\n\n=============================================");
-        System.out.println("\tWelcome to to the Hunger Games" + " " + player.getName());
-        System.out.println("\tMay the odds ever be in your favor.");
-        System.out.println("=================================================");
+        this.console.println("\n\n=============================================");
+        this.console.println("\tWelcome to to the Hunger Games" + " " + player.getName());
+        this.console.println("\tMay the odds ever be in your favor.");
+        this.console.println("=================================================");
     }
 
     public void display() {
