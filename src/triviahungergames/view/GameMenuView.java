@@ -19,8 +19,10 @@ public class GameMenuView extends View {
             +"\n---------------------------------------------"
             +"\n|                             Main Menu     |"
             +"\n---------------------------------------------"
-            +"\nM - Move                                     "         
-            +"\nR - Return                                   " 
+            +"\nM - Map                                      "         
+            + "\nS - Save Game                               "
+            + "\nH - Help                                    "
+            + "+\nR - Return                                 " 
             +"\n                                             "        
             +"\n---------------------------------------------");
             
@@ -35,27 +37,53 @@ public class GameMenuView extends View {
             case 'M':
             case 'm':
                 this.viewMoveView();
+                break;  
+            case 'H':
+            case 'h':
+                this.viewHelpMenu();
+                break;    
+            case 'S':
+            case 's':
+                this.saveGame();
                 break;    
             case 'R':
             case 'r':
                 return false;
             default:
-                System.out.println("\n*** Invalid selection, try again. ***");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection, please try again. ***");
                 break;
         }
         return true;
     }
     
-  private void viewMoveView() {
+
+    private void viewMoveView() {
         MoveView moveView = new MoveView();
         moveView.display();
     }
 
-   
+   private void viewHelpMenu() {
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.display();
+    }
 
    private void viewMainMenu() {
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
+    }
+   
+   private void saveGame() {
+        this.console.println("\n\n Please enter the file path where you would like this game to be saved.");
+        String filePath = this.getInput();
+        
+        try{
+            GameControl.saveGame(MainTriviaHungerGames.getCurrentGame(), filePath);
+        }
+        
+        catch(Exception ex){
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+    }
     }
     
 }

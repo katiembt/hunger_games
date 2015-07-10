@@ -6,15 +6,15 @@
 package triviahungergames.view;
 
 import java.io.PrintWriter;
-import triviahungergames.MainTriviaHungerGames;
+import triviahungergames.TriviaHungerGames;
 
 /**
  *
  * @author WINGU
  */
 public class ErrorView {
-    private static final PrintWriter errorFile = MainTriviaHungerGames.getOutFile();
-    private static final PrintWriter logFile = MainTriviaHungerGames.getLogFile();
+    private static final PrintWriter errorFile = TriviaHungerGames.getOutFile();
+    private static final PrintWriter logFile = TriviaHungerGames.getLogFile();
     
     
     public static void display(String className, String errorMessage) {

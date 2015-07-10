@@ -18,7 +18,7 @@ import triviahungergames.view.StartProgramView;
  *
  * @author katherineblake
  */
-public class MainTriviaHungerGames {
+public class TriviaHungerGames {
     private static Game currentGame = null;
     private static Player player = null;
 
@@ -32,7 +32,7 @@ public class MainTriviaHungerGames {
     }
 
     public static void setLogFile(PrintWriter logFile) {
-        MainTriviaHungerGames.logFile = logFile;
+        TriviaHungerGames.logFile = logFile;
     }
     
 
@@ -46,20 +46,20 @@ public class MainTriviaHungerGames {
     }
 
     
-    public void main(String[] args) {
+    public static void main(String[] args) {
         
         StartProgramView startProgramView = new StartProgramView();
         try {
             
             //open character stream files for end user input and output
-            MainTriviaHungerGames.inFile = 
+            TriviaHungerGames.inFile = 
                     new BufferedReader(new InputStreamReader(System.in));
             
-            MainTriviaHungerGames.outFile = 
+            TriviaHungerGames.outFile = 
                     new PrintWriter(System.out);   
                     
             String filePath ="log.txt";
-            MainTriviaHungerGames.logFile = new PrintWriter(filePath);
+            TriviaHungerGames.logFile = new PrintWriter(filePath);
         
            
             startProgramView.startProgram();   
@@ -71,14 +71,14 @@ public class MainTriviaHungerGames {
         }
         finally{
             try {
-                if(MainTriviaHungerGames.inFile !=null)
-                   MainTriviaHungerGames.inFile.close();
+                if(TriviaHungerGames.inFile !=null)
+                   TriviaHungerGames.inFile.close();
                 
-                if(MainTriviaHungerGames.outFile !=null)
-                   MainTriviaHungerGames.outFile.close();
+                if(TriviaHungerGames.outFile !=null)
+                   TriviaHungerGames.outFile.close();
                 
-                if(MainTriviaHungerGames.logFile !=null)
-                   MainTriviaHungerGames.logFile.close();
+                if(TriviaHungerGames.logFile !=null)
+                   TriviaHungerGames.logFile.close();
                 
             } catch (IOException ex) {
                System.out.println("error closing files");
@@ -92,7 +92,7 @@ public class MainTriviaHungerGames {
     }
     
     public static void setCurrentGame(Game currentGame){
-        MainTriviaHungerGames.currentGame = currentGame;
+        TriviaHungerGames.currentGame = currentGame;
     }
     
     public static Player getPlayer(){
@@ -100,7 +100,7 @@ public class MainTriviaHungerGames {
     }
     
     public static void setPlayer(Player player){
-        MainTriviaHungerGames.player = player;
+        TriviaHungerGames.player = player;
     }
 }
     

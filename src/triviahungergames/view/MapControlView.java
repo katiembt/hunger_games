@@ -43,7 +43,7 @@ public class MapControlView extends View {
             case 'r':
                 return false;
             default:
-                System.out.println("\n*** Invalid selection, try again. ***");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection, please try again. ***");
                 break;
         }
         return true;

@@ -7,7 +7,7 @@ package triviahungergames.view;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.Scanner;
-import triviahungergames.MainTriviaHungerGames;
+import triviahungergames.TriviaHungerGames;
 
 /**
  *
@@ -17,8 +17,8 @@ public abstract class View implements ViewInterface {
     
     private String promptMessage;
     
-    protected  final static BufferedReader keyboard = MainTriviaHungerGames.getInFile();
-    protected final static PrintWriter keyboard = MainTriviaHungerGames.getOutFile();
+    protected  final static BufferedReader keyboard = TriviaHungerGames.getInFile();
+    protected final static PrintWriter keyboard = TriviaHungerGames.getOutFile();
     
     public View(String promptMessage) {
         this.promptMessage= promptMessage;

@@ -6,7 +6,7 @@
 package triviahungergames.view;
 
 import triviahungergames.control.GameControl;
-import triviahungergames.MainTriviaHungerGames;
+import triviahungergames.TriviaHungerGames;
 
 /**
  *@katherineblake
@@ -53,25 +53,41 @@ public class MainMenuView extends View {
             case 'q':
                 return false;
             default:
-                System.out.println("\n*** Invalid selection, please try again. ***");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection, please try again. ***");
                 break;
         }
         
         return true;
     }
-//    private void startNewGame() {
-//        this.console.println("***newGame function called ***");
-//        GameControl.createNewGame(Hunger_games_text.getPlayer());
-//        
-//          gameMenuView.display();
-        private void viewGameMenu() {
+    private void startNewGame() {
+       this.console.println("***newGame function called ***");
+       GameControl.createNewGame(TriviaHungerGames.getPlayer());
+     
+        gameMenuView.display();
+    }
+    
+    private void viewGameMenu() {
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
     }
 
 
     private void continueExistingGame() {
-        this.console.println("*** continueExistingGame function called ***");
+         this.console.println("\n\nEnter the file path where the game is saved.");
+        
+        String filePath = this.getInput();
+        
+        try{
+            GameControl.continueGame(filePath);
+        }
+        
+        catch(Exception ex){
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    
     }
 
     private void displayHelpMenu() {

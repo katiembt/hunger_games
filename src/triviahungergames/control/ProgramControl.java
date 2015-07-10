@@ -7,7 +7,7 @@ package triviahungergames.control;
 
 import triviahungergames.model.Player;
 //import exceptions.programControlException;
-import triviahungergames.MainTriviaHungerGames;
+import triviahungergames.TriviaHungerGames;
 
 /**
  *
@@ -26,7 +26,7 @@ public class ProgramControl {
         Player player = new Player();
         player.setName(name);
         
-       MainTriviaHungerGames.setPlayer(player);
+       TriviaHungerGames.setPlayer(player);
         
         return player;
     }

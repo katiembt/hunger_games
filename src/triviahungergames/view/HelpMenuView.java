@@ -13,8 +13,6 @@ import java.util.Scanner;
  * @author katherineblake
  */
 public class HelpMenuView extends View {
-    protected final BufferedReader keyboard = MainTriviaHungerGames.getInFile();
-    protected final PrintWriter keyboard = MainTriviaHungerGames.getOutFile();
     
         public HelpMenuView() {
             super("\n"
@@ -52,8 +50,7 @@ public class HelpMenuView extends View {
             case 'r':
                 return false;
             default:
-                System.out.println
-                             ("\n******* Invalid selection, try again. *******");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection, please try again. ***");
                 break;
         }
         return true;
