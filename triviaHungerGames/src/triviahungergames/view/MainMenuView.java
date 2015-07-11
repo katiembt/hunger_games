@@ -71,7 +71,7 @@ public class MainMenuView extends View {
 
 
     private void continueExistingGame() {
-        this.console.println("*** continueExistingGame function called ***");
+        System.out.println("*** continueExistingGame function called ***");
     }
 
     private void displayHelpMenu() {

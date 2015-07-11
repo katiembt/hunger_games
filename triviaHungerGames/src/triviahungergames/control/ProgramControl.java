@@ -16,7 +16,7 @@ import triviahungergames.MainTriviaHungerGames;
 public class ProgramControl {
 
     public static Player createPlayer(String name) {
-        this.console.println("\n**** createPlayer function called ****");
+        System.out.println("\n**** createPlayer function called ****");
         if  (name==null) {
 //            throw new programControlException("Player's name needs to be atleast."
 //                                            +" two characters in length.");

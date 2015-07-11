@@ -31,7 +31,7 @@ public void display() {
         
         char selection = ' ';
         do {
-            this.console.println(promptMessage);
+            System.out.println(promptMessage);
             
             String input = this.getInput();
             selection = input.charAt(0);
@@ -50,7 +50,7 @@ public void display() {
         
         while(!valid) {
             
-            this.console.println("Please make a selection.");
+            System.out.println("Please make a selection.");
 
             menuItem = this.keyboard.readLine();
             menuItem = menuItem.trim();

@@ -50,7 +50,7 @@ public class MapControlView extends View {
     }
     
     private void viewMove() {
-        this.console.println("\n\n********************************************"
+        System.out.println("\n\n********************************************"
                             +"\n|            Map                           |"
                             +"\n********************************************"
                             +"\n*             Map                          *"
@@ -58,7 +58,7 @@ public class MapControlView extends View {
                    
     }
       private void viewGoHarvest() {
-        this.console.println("\n\n********************************************"
+        System.out.println("\n\n********************************************"
                             +"\n|            HARVEST                         |"
                             +"\n********************************************"            
                             +"\n*                                          *"

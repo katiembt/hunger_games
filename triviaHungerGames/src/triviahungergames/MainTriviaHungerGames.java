@@ -25,7 +25,7 @@ public class MainTriviaHungerGames {
         try {
           startProgramView.startProgram();   
         } catch (Throwable te) {
-            this.console.println(te.getMessage());
+            System.out.println(te.getMessage());
             te.printStackTrace();
             startProgramView.display();
         }
