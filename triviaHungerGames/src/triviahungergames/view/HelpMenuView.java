@@ -105,7 +105,7 @@ public class HelpMenuView extends View {
     }
 
     private void viewInventoryHelp() {
-       System.out.println("\n\n********************************************"
+        System.out.println("\n\n********************************************"
                             +"\n*************** Inventory ******************"
                             +"\n********************************************");
     }

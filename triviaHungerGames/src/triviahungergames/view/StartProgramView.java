@@ -62,13 +62,13 @@ public class StartProgramView {
     private String getPlayersName() {
         boolean valid = false; 
         String playersName = null;
-//        Scanner keyboard = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
         
         while(!valid){
             
             System.out.println("Enter the player's name below.");
             
-            playersName = this.keyboard.readLine();
+            playersName = keyboard.nextLine();
             playersName =playersName.trim();
             
             if(playersName.length() < 2){
@@ -93,4 +93,3 @@ public class StartProgramView {
     }
 
     }
-

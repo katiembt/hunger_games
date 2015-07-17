@@ -23,6 +23,7 @@ public class MainMenuView extends View {
             +"\nC - Continue Previous Game"
             +"\nH - Help"
             +"\nQ - Quit"
+            +"\nT - TEST"
             +"\n----------------------------------------------");
     }
              
@@ -39,7 +40,7 @@ public class MainMenuView extends View {
         switch(selection){
             case 'N':
             case 'n':
-                this.viewGameMenu();
+                this.viewQOne();
                 break;
             case 'C':
             case 'c':
@@ -47,6 +48,10 @@ public class MainMenuView extends View {
                 break;
             case 'H':
             case 'h':
+                this.displayQOne();
+                break;
+            case 'T':
+            case 't':
                 this.displayHelpMenu();
                 break;
             case 'Q':
@@ -60,15 +65,19 @@ public class MainMenuView extends View {
         return true;
     }
 //    private void startNewGame() {
-//        this.console.println("***newGame function called ***");
+//        System.out.println("***newGame function called ***");
 //        GameControl.createNewGame(Hunger_games_text.getPlayer());
 //        
 //          gameMenuView.display();
-        private void viewGameMenu() {
-        GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.display();
+//        private void viewGameMenu() {
+//        GameMenuView gameMenuView = new GameMenuView();
+//        gameMenuView.display();
+//    }
+    
+    private void viewQOne() {
+        QOne qOne = new QOne();
+        qOne.display();
     }
-
 
     private void continueExistingGame() {
         System.out.println("*** continueExistingGame function called ***");
@@ -77,6 +86,13 @@ public class MainMenuView extends View {
     private void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.display();
+    }
+    
+    
+    
+     private void displayQOne() {
+        QOne qOne = new QOne();
+        qOne.display();
     }
  
     

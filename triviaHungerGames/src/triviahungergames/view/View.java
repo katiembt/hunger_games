@@ -45,14 +45,14 @@ public void display() {
     @Override
     public String getInput() {
         boolean valid = false;
-//        Scanner keyboard=new Scanner(System.in);
+        Scanner keyboard=new Scanner(System.in);
         String menuItem ="";
         
         while(!valid) {
             
             System.out.println("Please make a selection.");
 
-            menuItem = this.keyboard.readLine();
+            menuItem = keyboard.nextLine();
             menuItem = menuItem.trim();
             
             if(menuItem.length()< 1) {

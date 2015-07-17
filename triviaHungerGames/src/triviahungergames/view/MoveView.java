@@ -57,7 +57,7 @@ public class MoveView extends View {
                    
     }
       private void viewMove() {
-       System.out.println("\n\n********************************************"
+        System.out.println("\n\n********************************************"
                             +"\n|            Move                          |"
                             +"\n********************************************"
                             +"\n* Where do you wantt to move?                *"
