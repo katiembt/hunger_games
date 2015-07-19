@@ -5,8 +5,6 @@
  */
 package triviahungergames.view;
 
-import java.io.BufferedReader;
-import java.io.PrintWriter;
 import java.util.Scanner;
 /**
  *
@@ -16,15 +14,17 @@ public class HelpMenuView extends View {
     
         public HelpMenuView() {
             super("\n"
-            +"\n---------------------------------------------"
-            +"\n|                               Help Menu   |"
-            +"\n---------------------------------------------"
-            +"\nO - Objective                                "
-            +"\nM - Move Help                                "
-            +"\nQ - Question Help                            "        
-            +"\nR - Return                                   "
-            +"\n                                             "
-            +"\n---------------------------------------------");
+            +"\n----------------------------------------------"
+            +"\n| Help Menu                                  |"
+            +"\n----------------------------------------------"
+            +"\nO - Objective"
+            +"\nM - Move "
+            +"\nA - Aid Packages"
+            +"\nI - View inventory"
+            +"\nF - Food"
+            +"\nB - Battle"        
+            +"\nR - Return"
+            +"\n----------------------------------------------");
             
         }
         
@@ -42,59 +42,83 @@ public class HelpMenuView extends View {
             case 'm':
                 this.viewMoveHelp();
                 break;
-            case 'Q':
-            case 'q':
-                this.viewQuestionHelp();
+            case 'A':
+            case 'a':
+                this.viewAidHelp();
+                break;
+            case 'I':
+            case 'i':
+                this.viewInventoryHelp();
+                break;
+            case 'B':
+            case 'b':
+                this.viewBattleHelp();
                 break;   
+             case 'F':
+            case 'f':
+                this.viewFoodHelp();
+                break;    
             case 'R':
             case 'r':
                 return false;
             default:
-                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection, please try again. ***");
+                System.out.println("\n*** Invalid selection, try again. ***");
                 break;
         }
         return true;
     }
     
     private void viewObjectivesHelp() {
-        this.console.println
-                             ("\n\n******************************************"
-                            +"\n|                    The Objective          |"
-                            +"\n*********************************************"
-                            +"\n* The objective of the game is to survive   *"
-                            +"\n*                                           *"
-                            +"\n* You do so by answering questions          *"
-                            +"\n* correctly, and every question correctly,  *"
-                            +"\n* or else you die losing to another tribute.*"
-                            +"\n*                                           *"
-                            +"\n*********************************************");
+        System.out.println("\n\n********************************************"
+                            +"\n|            The Objective                 |"
+                            +"\n********************************************"
+                            +"\n* The objective of the game is to survive. *"
+                            +"\n*                                          *"
+                            +"\n* You do so by killing all other tributes. *"
+                            +"\n* If you fail to kill them they will kill  *"
+                            +"\n* you.Last tribute standing wins.          *"
+                            +"\n*                                          *"
+                            +"\n********************************************");
                    
     }
 
     private void viewMoveHelp() {
-        this.console.println
-                             ("\n\n***************************************"
-                            +"\n|                      Move Help         |"
-                            +"\n*****************************************"
-                            +"\n* To move in this game you will need to  *"
-                            +"\n* defeat a competing tribute, you will   *"
-                            +"\n* automatically be transfere to the next *"
-                            +"\n* location on the map.                   *"
-                            +"\n*                                        *"         
-                            +"\n*****************************************");
+        System.out.println("\n\n*********************************************"
+                            +"\n************** Move Help*** *****************"
+                            +"\n* To move in this game you will nee to find *"
+                            +"\n* your current location. To do so select    *"
+                            +"\n* the map or 'M'. Now that the map is open  *"
+                            +"\n* find the location you want to move to     *"
+                            +"\n* you can only move one sqaure at a time    *"
+                            +"\n* yso choose wisely.                        *"
+                            +"\n*********************************************");
     
     }
+
+    private void viewAidHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n************* Aid Help *********************"
+                            +"\n* To open an aid package you must input    *"
+                            +"\n* the correct information. If the info  is *"
+                            +"\n*is correct you will be open the aid.      *"
+                            +"\n********************************************");
+    }
+
+    private void viewInventoryHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n*************** Inventory ******************"
+                            +"\n********************************************");
+    }
     
-     private void viewQuestionHelp() {
-        this.console.println
-                             ("\n\n***************************************"
-                            +"\n|                   Question Help        |"
-                            +"\n*****************************************"
-                            +"\n* We can't give you the answers, try     *"
-                            +"\n* Googling it or something, if don't know, *"
-                            +"\n* but you should already know these.     *"
-                            +"\n*                                        *"         
-                            +"\n*****************************************");
+     private void viewBattleHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n*************** BATTLE    ******************"
+                            +"\n********************************************");
+    }
+     private void viewFoodHelp() {
+        System.out.println("\n\n********************************************"
+                            +"\n*************** Food Help ******************"
+                            +"\n********************************************");
     }
 
     private void viewMainMenu() {

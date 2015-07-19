@@ -43,14 +43,14 @@ public class MapControlView extends View {
             case 'r':
                 return false;
             default:
-                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection, please try again. ***");
+                System.out.println("\n*** Invalid selection, try again. ***");
                 break;
         }
         return true;
     }
     
     private void viewMove() {
-        this.console.println("\n\n********************************************"
+        System.out.println("\n\n********************************************"
                             +"\n|            Map                           |"
                             +"\n********************************************"
                             +"\n*             Map                          *"
@@ -58,7 +58,7 @@ public class MapControlView extends View {
                    
     }
       private void viewGoHarvest() {
-        this.console.println("\n\n********************************************"
+        System.out.println("\n\n********************************************"
                             +"\n|            HARVEST                         |"
                             +"\n********************************************"            
                             +"\n*                                          *"

@@ -6,7 +6,7 @@
 package triviahungergames.view;
 
 import triviahungergames.control.GameControl;
-import triviahungergames.TriviaHungerGames;
+import triviahungergames.MainTriviaHungerGames;
 
 /**
  *@katherineblake
@@ -23,6 +23,7 @@ public class MainMenuView extends View {
             +"\nC - Continue Previous Game"
             +"\nH - Help"
             +"\nQ - Quit"
+            +"\nT - TEST"
             +"\n----------------------------------------------");
     }
              
@@ -39,7 +40,7 @@ public class MainMenuView extends View {
         switch(selection){
             case 'N':
             case 'n':
-                this.viewGameMenu();
+                this.viewQOne();
                 break;
             case 'C':
             case 'c':
@@ -47,52 +48,51 @@ public class MainMenuView extends View {
                 break;
             case 'H':
             case 'h':
+                this.displayQOne();
+                break;
+            case 'T':
+            case 't':
                 this.displayHelpMenu();
                 break;
             case 'Q':
             case 'q':
                 return false;
             default:
-                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection, please try again. ***");
+                System.out.println("\n*** Invalid selection, please try again. ***");
                 break;
         }
         
         return true;
     }
-    private void startNewGame() {
-       this.console.println("***newGame function called ***");
-       GameControl.createNewGame(TriviaHungerGames.getPlayer());
-     
-        gameMenuView.display();
-    }
+//    private void startNewGame() {
+//        System.out.println("***newGame function called ***");
+//        GameControl.createNewGame(Hunger_games_text.getPlayer());
+//        
+//          gameMenuView.display();
+//        private void viewGameMenu() {
+//        GameMenuView gameMenuView = new GameMenuView();
+//        gameMenuView.display();
+//    }
     
-    private void viewGameMenu() {
-        GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.display();
+    private void viewQOne() {
+        QOne qOne = new QOne();
+        qOne.display();
     }
-
 
     private void continueExistingGame() {
-         this.console.println("\n\nEnter the file path where the game is saved.");
-        
-        String filePath = this.getInput();
-        
-        try{
-            GameControl.continueGame(filePath);
-        }
-        
-        catch(Exception ex){
-            ErrorView.display("MainMenuView", ex.getMessage());
-        }
-        
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
-    
+        System.out.println("*** continueExistingGame function called ***");
     }
 
     private void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.display();
+    }
+    
+    
+    
+     private void displayQOne() {
+        QOne qOne = new QOne();
+        qOne.display();
     }
  
     
